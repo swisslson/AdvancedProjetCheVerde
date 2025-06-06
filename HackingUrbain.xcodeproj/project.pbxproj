@@ -19,10 +19,10 @@
 		FFDBBFF42DECB37C00929D3A /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFE42DECB37C00929D3A /* mapView.swift */; };
 		FFDBBFF52DECB37C00929D3A /* CreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFE62DECB37C00929D3A /* CreeView.swift */; };
 		FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEA2DECB37C00929D3A /* ContentView.swift */; };
-		FFDBBFF82DECB37C00929D3A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEC2DECB37C00929D3A /* ProfilView.swift */; };
 		FFDBBFF92DECB37C00929D3A /* TutorielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */; };
 		FFDBBFFA2DECB37C00929D3A /* HackingUrbainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */; };
-		FFDBBFFF2DECB86800929D3A /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFFE2DECB86800929D3A /* Struct.swift */; };
+		FFDBC1012DF319C700929D3A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC1002DF319C700929D3A /* ProfilView.swift */; };
+		FFDBC1032DF319E600929D3A /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC1022DF319E600929D3A /* Struct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +39,11 @@
 		FFDBBFE42DECB37C00929D3A /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
 		FFDBBFE62DECB37C00929D3A /* CreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreeView.swift; sourceTree = "<group>"; };
 		FFDBBFEA2DECB37C00929D3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FFDBBFEC2DECB37C00929D3A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorielView.swift; sourceTree = "<group>"; };
 		FFDBBFF02DECB37C00929D3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackingUrbainApp.swift; sourceTree = "<group>"; };
-		FFDBBFFE2DECB86800929D3A /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		FFDBC1002DF319C700929D3A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		FFDBC1022DF319E600929D3A /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 		FFDBBFED2DECB37C00929D3A /* Profil */ = {
 			isa = PBXGroup;
 			children = (
-				FFDBBFEC2DECB37C00929D3A /* ProfilView.swift */,
+				FFDBC1002DF319C700929D3A /* ProfilView.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 		FFDBBFFD2DECB80700929D3A /* Struct */ = {
 			isa = PBXGroup;
 			children = (
-				FFDBBFFE2DECB86800929D3A /* Struct.swift */,
+				FFDBC1022DF319E600929D3A /* Struct.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -245,14 +245,14 @@
 				FFDBBFF42DECB37C00929D3A /* mapView.swift in Sources */,
 				FFDBBFF52DECB37C00929D3A /* CreeView.swift in Sources */,
 				FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */,
-				FFDBBFFF2DECB86800929D3A /* Struct.swift in Sources */,
+				FFDBC1032DF319E600929D3A /* Struct.swift in Sources */,
 				8D7D46BB2DF1E19A00031242 /* StructGallery.swift in Sources */,
-				FFDBBFF82DECB37C00929D3A /* ProfilView.swift in Sources */,
 				FFDBBFF92DECB37C00929D3A /* TutorielView.swift in Sources */,
 				8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */,
 				8D7D46B92DF1D41500031242 /* GalleryView.swift in Sources */,
 				8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */,
 				8D7D469F2DF1983C00031242 /* StructEvent.swift in Sources */,
+				FFDBC1012DF319C700929D3A /* ProfilView.swift in Sources */,
 				8D7D46A02DF1983C00031242 /* FilterEventView.swift in Sources */,
 				8D7D46BD2DF2066300031242 /* PickerView.swift in Sources */,
 				FFDBBFFA2DECB37C00929D3A /* HackingUrbainApp.swift in Sources */,

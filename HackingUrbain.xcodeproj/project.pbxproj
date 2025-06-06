@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D7D468A2DF1962400031242 /* InstrumentSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */; };
+		8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46982DF1983C00031242 /* EventBlocView.swift */; };
+		8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46992DF1983C00031242 /* EventListView.swift */; };
+		8D7D469F2DF1983C00031242 /* StructEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D469B2DF1983C00031242 /* StructEvent.swift */; };
+		8D7D46A02DF1983C00031242 /* FilterEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D469A2DF1983C00031242 /* FilterEventView.swift */; };
+		8D7D46B92DF1D41500031242 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46B82DF1D3FD00031242 /* GalleryView.swift */; };
+		8D7D46BB2DF1E19A00031242 /* StructGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46BA2DF1E19000031242 /* StructGallery.swift */; };
+		8D7D46BD2DF2066300031242 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46BC2DF2065900031242 /* PickerView.swift */; };
+		FFDBBFF32DECB37C00929D3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDBBFF02DECB37C00929D3A /* Assets.xcassets */; };
+		FFDBBFF42DECB37C00929D3A /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFE42DECB37C00929D3A /* mapView.swift */; };
+		FFDBBFF52DECB37C00929D3A /* CreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFE62DECB37C00929D3A /* CreeView.swift */; };
+		FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEA2DECB37C00929D3A /* ContentView.swift */; };
+		FFDBBFF82DECB37C00929D3A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEC2DECB37C00929D3A /* ProfilView.swift */; };
+		FFDBBFF92DECB37C00929D3A /* TutorielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */; };
+		FFDBBFFA2DECB37C00929D3A /* HackingUrbainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */; };
+		FFDBBFFF2DECB86800929D3A /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFFE2DECB86800929D3A /* Struct.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D7D46882DF1938F00031242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSans-Bold.ttf"; sourceTree = "<group>"; };
+		8D7D46982DF1983C00031242 /* EventBlocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBlocView.swift; sourceTree = "<group>"; };
+		8D7D46992DF1983C00031242 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		8D7D469A2DF1983C00031242 /* FilterEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEventView.swift; sourceTree = "<group>"; };
+		8D7D469B2DF1983C00031242 /* StructEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructEvent.swift; sourceTree = "<group>"; };
+		8D7D46B82DF1D3FD00031242 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		8D7D46BA2DF1E19000031242 /* StructGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructGallery.swift; sourceTree = "<group>"; };
+		8D7D46BC2DF2065900031242 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		FFDBBFA92DECAC7B00929D3A /* HackingUrbain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingUrbain.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDBBFE42DECB37C00929D3A /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
+		FFDBBFE62DECB37C00929D3A /* CreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreeView.swift; sourceTree = "<group>"; };
+		FFDBBFEA2DECB37C00929D3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FFDBBFEC2DECB37C00929D3A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorielView.swift; sourceTree = "<group>"; };
+		FFDBBFF02DECB37C00929D3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackingUrbainApp.swift; sourceTree = "<group>"; };
+		FFDBBFFE2DECB86800929D3A /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFDBBFA62DECAC7B00929D3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFDBBFA02DECAC7B00929D3A = {
+			isa = PBXGroup;
+			children = (
+				FFDBBFF22DECB37C00929D3A /* HackingUrbain */,
+				FFDBBFAA2DECAC7B00929D3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFDBBFAA2DECAC7B00929D3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBBFA92DECAC7B00929D3A /* HackingUrbain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFDBBFE52DECB37C00929D3A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D46B82DF1D3FD00031242 /* GalleryView.swift */,
+				8D7D46BC2DF2065900031242 /* PickerView.swift */,
+				8D7D46BA2DF1E19000031242 /* StructGallery.swift */,
+				FFDBBFE42DECB37C00929D3A /* mapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		FFDBBFE72DECB37C00929D3A /* CreeUnEvenement */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBBFE62DECB37C00929D3A /* CreeView.swift */,
+			);
+			path = CreeUnEvenement;
+			sourceTree = "<group>";
+		};
+		FFDBBFE92DECB37C00929D3A /* Evenements */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D46982DF1983C00031242 /* EventBlocView.swift */,
+				8D7D46992DF1983C00031242 /* EventListView.swift */,
+				8D7D469A2DF1983C00031242 /* FilterEventView.swift */,
+				8D7D469B2DF1983C00031242 /* StructEvent.swift */,
+			);
+			path = Evenements;
+			sourceTree = "<group>";
+		};
+		FFDBBFEB2DECB37C00929D3A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBBFEA2DECB37C00929D3A /* ContentView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FFDBBFED2DECB37C00929D3A /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBBFEC2DECB37C00929D3A /* ProfilView.swift */,
+			);
+			path = Profil;
+			sourceTree = "<group>";
+		};
+		FFDBBFEF2DECB37C00929D3A /* Tutoriel */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */,
+			);
+			path = Tutoriel;
+			sourceTree = "<group>";
+		};
+		FFDBBFF22DECB37C00929D3A /* HackingUrbain */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D46882DF1938F00031242 /* Info.plist */,
+				8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */,
+				FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */,
+				FFDBBFFB2DECB7C100929D3A /* OnBoarding */,
+				FFDBBFFC2DECB7DF00929D3A /* Inscription */,
+				FFDBBFEB2DECB37C00929D3A /* Navigation */,
+				FFDBBFE52DECB37C00929D3A /* Map */,
+				FFDBBFEF2DECB37C00929D3A /* Tutoriel */,
+				FFDBBFE72DECB37C00929D3A /* CreeUnEvenement */,
+				FFDBBFE92DECB37C00929D3A /* Evenements */,
+				FFDBBFED2DECB37C00929D3A /* Profil */,
+				FFDBBFFD2DECB80700929D3A /* Struct */,
+				FFDBBFF02DECB37C00929D3A /* Assets.xcassets */,
+			);
+			path = HackingUrbain;
+			sourceTree = "<group>";
+		};
+		FFDBBFFB2DECB7C100929D3A /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		FFDBBFFC2DECB7DF00929D3A /* Inscription */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Inscription;
+			sourceTree = "<group>";
+		};
+		FFDBBFFD2DECB80700929D3A /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				FFDBBFFE2DECB86800929D3A /* Struct.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFDBBFA82DECAC7B00929D3A /* HackingUrbain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFDBBFB42DECAC7D00929D3A /* Build configuration list for PBXNativeTarget "HackingUrbain" */;
+			buildPhases = (
+				FFDBBFA52DECAC7B00929D3A /* Sources */,
+				FFDBBFA62DECAC7B00929D3A /* Frameworks */,
+				FFDBBFA72DECAC7B00929D3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackingUrbain;
+			packageProductDependencies = (
+			);
+			productName = HackingUrbain;
+			productReference = FFDBBFA92DECAC7B00929D3A /* HackingUrbain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFDBBFA12DECAC7B00929D3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					FFDBBFA82DECAC7B00929D3A = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = FFDBBFA42DECAC7B00929D3A /* Build configuration list for PBXProject "HackingUrbain" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFDBBFA02DECAC7B00929D3A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FFDBBFAA2DECAC7B00929D3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFDBBFA82DECAC7B00929D3A /* HackingUrbain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFDBBFA72DECAC7B00929D3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDBBFF32DECB37C00929D3A /* Assets.xcassets in Resources */,
+				8D7D468A2DF1962400031242 /* InstrumentSans-Bold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFDBBFA52DECAC7B00929D3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDBBFF42DECB37C00929D3A /* mapView.swift in Sources */,
+				FFDBBFF52DECB37C00929D3A /* CreeView.swift in Sources */,
+				FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */,
+				FFDBBFFF2DECB86800929D3A /* Struct.swift in Sources */,
+				8D7D46BB2DF1E19A00031242 /* StructGallery.swift in Sources */,
+				FFDBBFF82DECB37C00929D3A /* ProfilView.swift in Sources */,
+				FFDBBFF92DECB37C00929D3A /* TutorielView.swift in Sources */,
+				8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */,
+				8D7D46B92DF1D41500031242 /* GalleryView.swift in Sources */,
+				8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */,
+				8D7D469F2DF1983C00031242 /* StructEvent.swift in Sources */,
+				8D7D46A02DF1983C00031242 /* FilterEventView.swift in Sources */,
+				8D7D46BD2DF2066300031242 /* PickerView.swift in Sources */,
+				FFDBBFFA2DECB37C00929D3A /* HackingUrbainApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FFDBBFB22DECAC7D00929D3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFDBBFB32DECAC7D00929D3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FFDBBFB52DECAC7D00929D3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackingUrbain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.premierprojet.HackingUrbain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFDBBFB62DECAC7D00929D3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HackingUrbain/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.premierprojet.HackingUrbain;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFDBBFA42DECAC7B00929D3A /* Build configuration list for PBXProject "HackingUrbain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDBBFB22DECAC7D00929D3A /* Debug */,
+				FFDBBFB32DECAC7D00929D3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFDBBFB42DECAC7D00929D3A /* Build configuration list for PBXNativeTarget "HackingUrbain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFDBBFB52DECAC7D00929D3A /* Debug */,
+				FFDBBFB62DECAC7D00929D3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFDBBFA12DECAC7B00929D3A /* Project object */;
+}

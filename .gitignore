@@ -1,0 +1,4 @@
+## Remove local data
+HackingUrbain.xcodeproj/xcuserdata
+.DS_Store
+HackingUrbain/.DS_Store

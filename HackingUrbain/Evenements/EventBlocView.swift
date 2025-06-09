@@ -14,13 +14,12 @@ struct EventView: View {
         ZStack { //BLOC EVENT
             Rectangle()
                 .fill(event.color)
-                .frame(height: 200.0)
+                .frame(height: 230.0)
                 .clipShape(RoundedCorner(radius: 25, corners: [.topLeft, .topRight]))
             VStack {
                 HStack {
                     Text(event.date)
                         .font(.system(size: 34, weight: .bold))
-                        .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                         .padding()
                     Rectangle() //trait
@@ -28,7 +27,6 @@ struct EventView: View {
                     VStack(alignment: .leading) {
                         Text(event.titre)
                             .font(Font.custom("InstrumentSans-bold", size: 20))
-                            .fontWeight(.bold)
                             .padding(.bottom, 5)
                         Text(event.description)
                             .font(.system(size: 12))
@@ -38,12 +36,12 @@ struct EventView: View {
                     }
                     .padding()
                 }
-                HStack {
-                    Image(systemName: "calendar")
+                HStack { //heure
+                    Image(systemName: "clock.fill")
                         .padding(.leading, 20)
                     Text(event.heure)
                         .font(.system(size: 12))
-                    ZStack {
+                    ZStack { //tag
                         RoundedRectangle(cornerRadius: 25)
                             .stroke(Color.black, lineWidth: 1)
                             .frame(width: 80.0, height: 30.0)
@@ -52,7 +50,7 @@ struct EventView: View {
                     }
                     .padding(.leading, 20)
                     Spacer()
-                    //icone participants
+                    //icones participants
                     HStack (spacing: -10){
                         Image("user1")
                             .resizable()
@@ -84,15 +82,15 @@ struct EventView: View {
                     .padding(.trailing, 20)
                 }
             }
-            .padding(.bottom, 30)
+            .padding(.bottom, 45)
         }
     }
-struct RoundedCorner: Shape {
-    var radius: CGFloat = 25.0
-    var corners: UIRectCorner = .allCorners
+    struct RoundedCorner: Shape {
+        var radius: CGFloat = 25.0
+        var corners: UIRectCorner = .allCorners
         
-    func path(in rect: CGRect) -> Path {
-        let path = UIBezierPath(
+        func path(in rect: CGRect) -> Path {
+            let path = UIBezierPath(
                 roundedRect: rect,
                 byRoundingCorners: corners,
                 cornerRadii: CGSize(width: radius, height: radius)
@@ -101,3 +99,8 @@ struct RoundedCorner: Shape {
         }
     }
 }
+
+#Preview {
+    EventView(event: eventArray[0])
+}
+

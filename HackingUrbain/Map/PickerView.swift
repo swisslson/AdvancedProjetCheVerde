@@ -15,33 +15,9 @@ struct PickerView: View {
         var id: String { self.rawValue }
     }
     
-    @State private var selectedView: PickerSelection = .list
+    @State private var selectedView: PickerSelection = .map
     
     var body: some View {
-        /*VStack(spacing: 20) {
-            // Picker
-            HStack(spacing: 10) {
-                ForEach(PickerSelection.allCases) { option in
-                    Text(option.rawValue)
-                        .font(.system(size: 12, weight: .medium))
-                        .padding(.vertical, 8)
-                        .frame(maxWidth: .infinity)
-                        .background(
-                            RoundedRectangle(cornerRadius: 5)
-                                .fill(selectedView == option ? Color.vert : Color.white)
-                                .shadow(color: .gray, radius: 1, x:0.5, y:0.5)
-                        )
-                        .onTapGesture {
-                            selectedView = option
-                        }
-                }
-            }
-            .background(
-                RoundedRectangle(cornerRadius: 30)
-                    .fill(Color.grisClair)
-            )
-            .padding(.top)
-            .padding([.leading, .trailing], 50)*/
             VStack{
                 Picker("", selection: $selectedView) {
                     ForEach (PickerSelection.allCases, id: \.self) { page in
@@ -57,7 +33,7 @@ struct PickerView: View {
 
                 switch selectedView {
                 case .map:
-                    mapView()
+                    MapView()
                 case .list:
                     EventListView()
                 case .gallery:

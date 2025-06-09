@@ -11,12 +11,13 @@
 		8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46982DF1983C00031242 /* EventBlocView.swift */; };
 		8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46992DF1983C00031242 /* EventListView.swift */; };
 		8D7D469F2DF1983C00031242 /* StructEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D469B2DF1983C00031242 /* StructEvent.swift */; };
-		8D7D46A02DF1983C00031242 /* FilterEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D469A2DF1983C00031242 /* FilterEventView.swift */; };
+		8D7D46A02DF1983C00031242 /* SelectFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D469A2DF1983C00031242 /* SelectFilterView.swift */; };
 		8D7D46B92DF1D41500031242 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46B82DF1D3FD00031242 /* GalleryView.swift */; };
 		8D7D46BB2DF1E19A00031242 /* StructGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46BA2DF1E19000031242 /* StructGallery.swift */; };
 		8D7D46BD2DF2066300031242 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46BC2DF2065900031242 /* PickerView.swift */; };
+		8D94466F2DF71F2A0023FD69 /* StructFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D94466E2DF71F120023FD69 /* StructFilterView.swift */; };
 		FFDBBFF32DECB37C00929D3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDBBFF02DECB37C00929D3A /* Assets.xcassets */; };
-		FFDBBFF42DECB37C00929D3A /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFE42DECB37C00929D3A /* mapView.swift */; };
+		FFDBBFF42DECB37C00929D3A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFE42DECB37C00929D3A /* MapView.swift */; };
 		FFDBBFF52DECB37C00929D3A /* CreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFE62DECB37C00929D3A /* CreeView.swift */; };
 		FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEA2DECB37C00929D3A /* ContentView.swift */; };
 		FFDBBFF92DECB37C00929D3A /* TutorielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */; };
@@ -30,13 +31,14 @@
 		8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSans-Bold.ttf"; sourceTree = "<group>"; };
 		8D7D46982DF1983C00031242 /* EventBlocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBlocView.swift; sourceTree = "<group>"; };
 		8D7D46992DF1983C00031242 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
-		8D7D469A2DF1983C00031242 /* FilterEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEventView.swift; sourceTree = "<group>"; };
+		8D7D469A2DF1983C00031242 /* SelectFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterView.swift; sourceTree = "<group>"; };
 		8D7D469B2DF1983C00031242 /* StructEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructEvent.swift; sourceTree = "<group>"; };
 		8D7D46B82DF1D3FD00031242 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		8D7D46BA2DF1E19000031242 /* StructGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructGallery.swift; sourceTree = "<group>"; };
 		8D7D46BC2DF2065900031242 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		8D94466E2DF71F120023FD69 /* StructFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructFilterView.swift; sourceTree = "<group>"; };
 		FFDBBFA92DECAC7B00929D3A /* HackingUrbain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackingUrbain.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFDBBFE42DECB37C00929D3A /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
+		FFDBBFE42DECB37C00929D3A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FFDBBFE62DECB37C00929D3A /* CreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreeView.swift; sourceTree = "<group>"; };
 		FFDBBFEA2DECB37C00929D3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorielView.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 				8D7D46B82DF1D3FD00031242 /* GalleryView.swift */,
 				8D7D46BC2DF2065900031242 /* PickerView.swift */,
 				8D7D46BA2DF1E19000031242 /* StructGallery.swift */,
-				FFDBBFE42DECB37C00929D3A /* mapView.swift */,
+				FFDBBFE42DECB37C00929D3A /* MapView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -97,7 +99,8 @@
 			children = (
 				8D7D46982DF1983C00031242 /* EventBlocView.swift */,
 				8D7D46992DF1983C00031242 /* EventListView.swift */,
-				8D7D469A2DF1983C00031242 /* FilterEventView.swift */,
+				8D94466E2DF71F120023FD69 /* StructFilterView.swift */,
+				8D7D469A2DF1983C00031242 /* SelectFilterView.swift */,
 				8D7D469B2DF1983C00031242 /* StructEvent.swift */,
 			);
 			path = Evenements;
@@ -242,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDBBFF42DECB37C00929D3A /* mapView.swift in Sources */,
+				FFDBBFF42DECB37C00929D3A /* MapView.swift in Sources */,
 				FFDBBFF52DECB37C00929D3A /* CreeView.swift in Sources */,
 				FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */,
 				FFDBC1032DF319E600929D3A /* Struct.swift in Sources */,
@@ -253,7 +256,8 @@
 				8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */,
 				8D7D469F2DF1983C00031242 /* StructEvent.swift in Sources */,
 				FFDBC1012DF319C700929D3A /* ProfilView.swift in Sources */,
-				8D7D46A02DF1983C00031242 /* FilterEventView.swift in Sources */,
+				8D94466F2DF71F2A0023FD69 /* StructFilterView.swift in Sources */,
+				8D7D46A02DF1983C00031242 /* SelectFilterView.swift in Sources */,
 				8D7D46BD2DF2066300031242 /* PickerView.swift in Sources */,
 				FFDBBFFA2DECB37C00929D3A /* HackingUrbainApp.swift in Sources */,
 			);

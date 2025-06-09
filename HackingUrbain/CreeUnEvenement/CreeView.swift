@@ -29,12 +29,6 @@ struct CreeView: View {
 
 
 
-
-
-
-
-
-
 #Preview {
     CreeView()
 }

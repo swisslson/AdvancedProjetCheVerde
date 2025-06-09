@@ -26,5 +26,5 @@ struct SelectFilterView: View {
 }
 
 #Preview {
-    SelectFilterView(title: "Aujourd'hui", isSelected: true, selectedColor: .blue)
+    SelectFilterView(title: "Aujourd'hui", isSelected: true, selectedColor: Color("orangeF"))
 }

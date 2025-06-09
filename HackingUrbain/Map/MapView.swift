@@ -12,16 +12,17 @@ struct MapView: View {
     
     let places = eventArray
     @State private var selectedFilter: Filter? = nil
+    @State private var selectedEvent: Event? = nil
     
     @State private var cameraPosition: MapCameraPosition = .camera(
         MapCamera(
-            centerCoordinate: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522), //coordonnées
-            distance: 30000,   // zoom (en metre)
-            heading: 0,        // Orientation vers le nord
-            pitch: 0,         // Inclinaison vue de dessus
+            centerCoordinate: CLLocationCoordinate2D(latitude: 48.8566, longitude: 2.3522),
+            distance: 30000,
+            heading: 0,
+            pitch: 0
         )
     )
-    //Struct pour appliquer filtres par cat
+    
     var filteredPlaces: [Event] {
         if let selectedFilter, selectedFilter.name != "Tous" {
             return places.filter { $0.Category == selectedFilter.name }
@@ -29,42 +30,54 @@ struct MapView: View {
             return places
         }
     }
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ScrollView(.horizontal) {
-                ZStack {//FILTRES
+        ZStack(alignment: .bottom) { // permet de superposer la fiche event
+            VStack(alignment: .leading, spacing: 20) {
+                ScrollView(.horizontal) {
                     HStack(spacing: 12) {
                         ForEach(filtersMap) { filter in
-                                    SelectFilterView(
-                                        title: filter.name,
-                                        isSelected: filter.id == selectedFilter?.id,
-                                        selectedColor: filter.color
-                                        )
-                                .onTapGesture {
-                                    selectedFilter = filter
-                                }
+                            SelectFilterView(
+                                title: filter.name,
+                                isSelected: filter.id == selectedFilter?.id,
+                                selectedColor: filter.color
+                            )
+                            .onTapGesture {
+                                selectedFilter = filter
+                            }
+                        }
+                    }
+                    .padding(.leading, 20)
+                }
+                .scrollIndicators(.hidden)
+                
+                Map(position: $cameraPosition) {
+                    ForEach(filteredPlaces) { place in
+                        Annotation("", coordinate: place.coordinate) {
+                            VStack {
+                                Image(systemName: "leaf.fill")
+                                    .foregroundColor(Color.white)
+                            }
+                            .padding(6)
+                            .background(place.colorMap)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .onTapGesture {
+                                selectedEvent = place
+                            }
                         }
                     }
                 }
-            }.scrollIndicators(.hidden)
-                .padding(.leading, 20)
-            Map(position: $cameraPosition) {
-                ForEach(filteredPlaces) { place in
-                    Annotation("", coordinate: place.coordinate) {
-                        VStack {
-                            Image(systemName: "leaf.fill")
-                                .foregroundColor(Color.white)
-                        }
-                        .padding(6)
-                        .background(place.colorMap)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                    }
-                }
+                .mapStyle(.standard(pointsOfInterest: .excludingAll))
             }
-            .mapStyle(.standard(pointsOfInterest: .excludingAll))
+            // MODALE – fiche info event
+            if let event = selectedEvent {
+                PlacesDetailsView(place: event, onDismiss: { selectedEvent = nil })
+                .transition(.move(edge: .bottom)) // animation
+            }
         }
     }
 }
-#Preview {
-    MapView()
-}
+
+//Preview {
+//    MapView()
+//}

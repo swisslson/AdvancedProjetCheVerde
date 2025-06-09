@@ -22,6 +22,7 @@ struct Event: Identifiable {
     var Category: String
     var colorMap: Color
     var dateEvent: Date
+    var adress: String
     
     //ajouter image pour user ?
 }
@@ -36,10 +37,12 @@ struct Event: Identifiable {
             NbUsers: "+5",
             color: Color("vert"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8976, longitude: 2.3444),
+            coordinate: CLLocationCoordinate2D(latitude: 48.8976, longitude: 2.3444), //Porte de Clignancourt
             Category: "Ateliers",
             colorMap: Color("vert"),
-            dateEvent: Date()
+            dateEvent: Date(),
+            adress : "20 rue des bosquets, 75017 Paris"
+            
         ),
         Event(
             date: "18\n06",
@@ -51,10 +54,12 @@ struct Event: Identifiable {
             NbUsers: "+7",
             color: Color("violet"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8400, longitude: 2.3655),
+            coordinate: CLLocationCoordinate2D(latitude: 48.8400, longitude: 2.3655), //Austerlitz
             Category: "Actions",
             colorMap: Color("violet"),
-            dateEvent: Date()
+            dateEvent: Date(),
+            adress : "56 rue de la rapée, 75012 Paris"
+            
         ),
         Event(
             date: "18\n06",
@@ -66,10 +71,11 @@ struct Event: Identifiable {
             NbUsers: "+2",
             color: Color("orangeF"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8733, longitude: 2.3895),
+            coordinate: CLLocationCoordinate2D(latitude: 48.8733, longitude: 2.3895), // Ménilmontant
             Category: "Actions",
             colorMap: Color("violet"),
-            dateEvent: Date()
+            dateEvent: Date(),
+            adress : "67 rue Menilmontant, 75020 Paris"
         ),
         Event(
             date: "23\n06",
@@ -81,26 +87,27 @@ struct Event: Identifiable {
             NbUsers: "+1",
             color: Color("vert"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8638, longitude: 2.4433),
+            coordinate: CLLocationCoordinate2D(latitude: 48.8638, longitude: 2.4433), //Haut Montreuil
             Category: "Ateliers",
             colorMap: Color("vert"),
-            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : "134 rue de Paris, 93000 Montreuil"
         ),
         Event(
             date: "23\n06",
-            titre: "...",
-            description: "Venez mener la green guerilla avec nous en fabriquant vos Seed bombs Envie de transformer la ville avec nous ? Rejoignez notre atelier de fabrication de seed bombs 💣 et devenez acteur·rice du changement ! ",
+            titre: "",
+            description: "",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
             color: Color("orangeF"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8545, longitude: 2.4290),
-            Category: "Ateliers",
-            colorMap: Color("vert"),
-            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!
-            
+            coordinate: CLLocationCoordinate2D(latitude: 48.8545, longitude: 2.4290), // Robespierre
+            Category: "Photos",
+            colorMap: Color("orangeF"),
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress: ""
         ),
         Event(
             date: "23\n06",
@@ -112,10 +119,11 @@ struct Event: Identifiable {
             NbUsers: "+1",
             color: Color("violet"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8352, longitude:  2.3877),
+            coordinate: CLLocationCoordinate2D(latitude: 48.8352, longitude:  2.3877), //Bercy
             Category: "Photos",
             colorMap: Color("orangeF"),
-            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : ""
         ),
         Event(
             date: "23\n06",
@@ -127,24 +135,106 @@ struct Event: Identifiable {
             NbUsers: "+1",
             color: Color("orangeF"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8407, longitude: 2.3211),
+            coordinate: CLLocationCoordinate2D(latitude: 48.8407, longitude: 2.3211), //Montparnasse
             Category: "Photos",
             colorMap: Color("orangeF"),
-            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : " 234 boulevard Montparnasse, paris 14"
         ),
         Event(
             date: "23\n06",
-            titre: "...",
-            description: "Venez mener la green guerilla avec nous en fabriquant vos Seed bombs Envie de transformer la ville avec nous ? Rejoignez notre atelier de fabrication de seed bombs 💣 et devenez acteur·rice du changement ! ",
+            titre: "",
+            description: "",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
             color: Color("orangeF"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8691, longitude: 2.3632),
+            coordinate: CLLocationCoordinate2D(latitude: 48.8691, longitude: 2.3632), //République
             Category: "Ateliers",
             colorMap: Color("vert"),
-            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : "134 avenue de la Republique, Paris 4"
+        ),
+        Event(
+            date: "23\n06",
+            titre: "",
+            description: "",
+            heure: "17h00",
+            isFull: true,
+            status: "Complet",
+            NbUsers: "+1",
+            color: Color("orangeF"),
+            image: nil,
+            coordinate: CLLocationCoordinate2D(latitude: 48.8350, longitude: 2.2934),//convention
+            Category: "Ateliers",
+            colorMap: Color("vert"),
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : ""
+        ),
+        Event(
+            date: "23\n06",
+            titre: "",
+            description: "",
+            heure: "17h00",
+            isFull: true,
+            status: "Complet",
+            NbUsers: "+1",
+            color: Color("orangeF"),
+            image: nil,
+            coordinate: CLLocationCoordinate2D(latitude: 2.3488, longitude: 2.3488), //quartier latin
+            Category: "Ateliers",
+            colorMap: Color("vert"),
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : ""
+        ),
+        Event(
+            date: "23\n06",
+            titre: "",
+            description: "",
+            heure: "17h00",
+            isFull: true,
+            status: "Complet",
+            NbUsers: "+1",
+            color: Color("orangeF"),
+            image: nil,
+            coordinate: CLLocationCoordinate2D(latitude: 48.8465, longitude: 2.2591), //Auteuil 48.8702, 2.3242
+            Category: "Actions",
+            colorMap: Color("violet"),
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : ""
+        ),
+        Event(
+            date: "23\n06",
+            titre: "",
+            description: "",
+            heure: "17h00",
+            isFull: true,
+            status: "Complet",
+            NbUsers: "+1",
+            color: Color("orangeF"),
+            image: nil,
+            coordinate: CLLocationCoordinate2D(latitude: 48.8702, longitude: 2.3242), //Madeleine
+            Category: "Photos",
+            colorMap: Color("orangeF"),
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : ""
+        ),
+        Event(
+            date: "23\n06",
+            titre: "",
+            description: "",
+            heure: "17h00",
+            isFull: true,
+            status: "Complet",
+            NbUsers: "+1",
+            color: Color("orangeF"),
+            image: nil,
+            coordinate: CLLocationCoordinate2D(latitude: 48.8912, longitude: 2.3015), //Levallois
+            Category: "Actions",
+            colorMap: Color("violet"),
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : ""
         ),
     ]

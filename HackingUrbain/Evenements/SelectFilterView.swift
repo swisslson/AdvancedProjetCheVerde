@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SelectFilterView: View {
-    
     let title: String
     let isSelected: Bool
     let selectedColor: Color

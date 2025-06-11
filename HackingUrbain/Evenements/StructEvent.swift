@@ -23,7 +23,6 @@ struct Event: Identifiable {
     var colorMap: Color
     var dateEvent: Date
     var adress: String
-    
     //ajouter image pour user ?
 }
     let eventArray: [Event] = [
@@ -46,7 +45,7 @@ struct Event: Identifiable {
         ),
         Event(
             date: "18\n06",
-            titre: "Jardinons collaboratif",
+            titre: "Jardinons la ville",
             description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "11h00",
             isFull: true,
@@ -95,61 +94,61 @@ struct Event: Identifiable {
         ),
         Event(
             date: "23\n06",
-            titre: "",
-            description: "",
-            heure: "17h00",
-            isFull: true,
-            status: "Complet",
-            NbUsers: "+1",
-            color: Color("orangeF"),
-            image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8545, longitude: 2.4290), // Robespierre
-            Category: "Photos",
-            colorMap: Color("orangeF"),
-            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress: ""
-        ),
-        Event(
-            date: "23\n06",
-            titre: "Atelier Bombes de Graines",
-            description: "Venez mener la green guerilla avec nous en fabriquant vos Seed bombs Envie de transformer la ville avec nous ? Rejoignez notre atelier de fabrication de seed bombs 💣 et devenez acteur·rice du changement ! ",
+            titre: "Titre",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
             color: Color("violet"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8352, longitude:  2.3877), //Bercy
+            coordinate: CLLocationCoordinate2D(latitude: 48.8545, longitude: 2.4290), // Robespierre
             Category: "Photos",
             colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : ""
+            adress: "64 rue de Paris, 93000 Montreuil"
         ),
         Event(
             date: "23\n06",
-            titre: "...",
-            description: "Venez mener la green guerilla avec nous en fabriquant vos Seed bombs Envie de transformer la ville avec nous ? Rejoignez notre atelier de fabrication de seed bombs 💣 et devenez acteur·rice du changement ! ",
+            titre: "Bouges ton douze",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
             color: Color("orangeF"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8407, longitude: 2.3211), //Montparnasse
+            coordinate: CLLocationCoordinate2D(latitude: 48.8352, longitude:  2.3877), //Bercy
             Category: "Photos",
             colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : " 234 boulevard Montparnasse, paris 14"
+            adress : "5 rue de Bercy, paris 12"
         ),
         Event(
             date: "23\n06",
-            titre: "",
-            description: "",
+            titre: "Titre",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
-            color: Color("orangeF"),
+            color: Color("vert"),
+            image: nil,
+            coordinate: CLLocationCoordinate2D(latitude: 48.8407, longitude: 2.3211), //Montparnasse
+            Category: "Photos",
+            colorMap: Color("orangeF"),
+            dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
+            adress : "4 boulevard Montparnasse, paris 14"
+        ),
+        Event(
+            date: "23\n06",
+            titre: "Atelier",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
+            heure: "17h00",
+            isFull: true,
+            status: "Complet",
+            NbUsers: "+1",
+            color: Color("violet"),
             image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8691, longitude: 2.3632), //République
             Category: "Ateliers",
@@ -159,8 +158,8 @@ struct Event: Identifiable {
         ),
         Event(
             date: "23\n06",
-            titre: "",
-            description: "",
+            titre: "Atelier",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
@@ -171,35 +170,35 @@ struct Event: Identifiable {
             Category: "Ateliers",
             colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : ""
+            adress : "14 avenue Convention, Paris 15"
         ),
         Event(
             date: "23\n06",
-            titre: "",
-            description: "",
+            titre: "Ateliers découverte",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
-            color: Color("orangeF"),
+            color: Color("vert"),
             image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 2.3488, longitude: 2.3488), //quartier latin
             Category: "Ateliers",
             colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : ""
+            adress : "39 rue des Ecoles, 75006 Paris"
         ),
         Event(
             date: "23\n06",
-            titre: "",
-            description: "",
+            titre: "Titre",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
-            color: Color("orangeF"),
+            color: Color("violet"),
             image: nil,
-            coordinate: CLLocationCoordinate2D(latitude: 48.8465, longitude: 2.2591), //Auteuil 48.8702, 2.3242
+            coordinate: CLLocationCoordinate2D(latitude: 48.8465, longitude: 2.2591), //Auteuil
             Category: "Actions",
             colorMap: Color("violet"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
@@ -207,8 +206,8 @@ struct Event: Identifiable {
         ),
         Event(
             date: "23\n06",
-            titre: "",
-            description: "",
+            titre: "Titre",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
@@ -219,22 +218,22 @@ struct Event: Identifiable {
             Category: "Photos",
             colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : ""
+            adress : "22 rue des Martyrs, 75008 Paris"
         ),
         Event(
             date: "23\n06",
-            titre: "",
-            description: "",
+            titre: "EnGraines-toi",
+            description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
             status: "Complet",
             NbUsers: "+1",
-            color: Color("orangeF"),
+            color: Color("vert"),
             image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8912, longitude: 2.3015), //Levallois
             Category: "Actions",
             colorMap: Color("violet"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : ""
+            adress : "89 rue du bois, 75016 Paris"
         ),
     ]

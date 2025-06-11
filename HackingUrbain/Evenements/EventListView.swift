@@ -9,6 +9,7 @@ import SwiftUI
 struct EventListView: View {
     let events = eventArray
     @State private var selectedFilter: Filter = filtersDate[0]
+    @State private var navigationPath = NavigationPath() // chemin de navigation
     
     //struct pour appliquer filtres par date
     var filteredEvents: [Event]  {
@@ -30,43 +31,45 @@ struct EventListView: View {
         }
     }
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            ScrollView(.horizontal) {
-                ZStack {//BOUCLE FILTRES
-                    HStack(spacing: 12) {
-                        ForEach(filtersDate) { filter in
-                            SelectFilterView(
-                                title: filter.name,
-                                isSelected: filter == selectedFilter,
-                                selectedColor: filter.color
-                            )
-                            .onTapGesture {
-                                selectedFilter = filter
+        NavigationStack(path: $navigationPath) {
+            VStack(alignment: .leading, spacing: 20) {
+                ScrollView(.horizontal) {
+                    ZStack {//BOUCLE FILTRES
+                        HStack(spacing: 12) {
+                            ForEach(filtersDate) { filter in
+                                SelectFilterView(
+                                    title: filter.name,
+                                    isSelected: filter == selectedFilter,
+                                    selectedColor: filter.color
+                                )
+                                .onTapGesture {
+                                    selectedFilter = filter
+                                }
                             }
                         }
-                    }
-                }//FIN FILTRES
-            }
-            .scrollIndicators(.hidden)
-            .padding(.leading, 20)
-            if filteredEvents.isEmpty {
-                Spacer()
-                Text("Pas d'évènements pour le moment.")
-                    .font(.system(size: 14))
-                    .multilineTextAlignment(.center)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                Spacer()
-            }
-            else {
-                ScrollView {
-                    VStack(spacing: -35) { //BOUCLE BLOC EVENT
-                        ForEach(filteredEvents) { event in
-                            EventView(event: event)
+                    }//FIN FILTRES
+                }
+                .scrollIndicators(.hidden)
+                .padding(.leading, 20)
+                if filteredEvents.isEmpty {
+                    Spacer()
+                    Text("Pas d'évènements pour le moment.")
+                        .font(.system(size: 14))
+                        .multilineTextAlignment(.center)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                    Spacer()
+                }
+                else {
+                    ScrollView {
+                        VStack(spacing: -35) { //BOUCLE BLOC EVENT
+                            ForEach(filteredEvents) { event in
+                                EventView(event: event)
+                            }
                         }
                     }
                 }
             }
-        }
+        }//navigationStack
     }
 }
 #Preview {

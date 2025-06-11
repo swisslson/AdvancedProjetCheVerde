@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PlacesDetailsView: View {
     let place: Event
-    let onDismiss: () -> Void //fonction popur close la modale
+    let onDismiss: () -> Void //fonction popur fermer la modale
+    
     var body: some View {
         ZStack { // BLOC EVENT
             Rectangle()
@@ -41,7 +42,6 @@ struct PlacesDetailsView: View {
                             .lineSpacing(2)
                             .lineLimit(3)
                             .truncationMode(.tail)
-                    
                     }
                 }
                 HStack {
@@ -74,6 +74,7 @@ struct PlacesDetailsView: View {
             .padding(.vertical, 20)
             .padding(.horizontal, 20)
         }
+        .foregroundStyle(.black)
         .padding(.horizontal, 20)
         .padding(.bottom, 20)
     }

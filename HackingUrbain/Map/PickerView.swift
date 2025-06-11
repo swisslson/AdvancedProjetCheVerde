@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct PickerView: View {
+    
     private enum PickerSelection: String, CaseIterable, Identifiable {
         case map = "Carte"
         case list = "Liste"
@@ -14,38 +15,39 @@ struct PickerView: View {
         
         var id: String { self.rawValue }
     }
-    
+    //Par default la vue map est selectionnée
     @State private var selectedView: PickerSelection = .map
     
     var body: some View {
-            VStack{
-                Picker("", selection: $selectedView) {
-                    ForEach (PickerSelection.allCases, id: \.self) { page in
-                        Text(page.rawValue).tag(page)
-                            .padding(.vertical, 10)
-                    }
-                } //picker fin
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-                .cornerRadius(25)
-                .padding(.top)
-                .padding([.leading, .trailing], 50)
-
-                switch selectedView {
-                case .map:
-                    MapView()
-                case .list:
-                    EventListView()
-                case .gallery:
-                    GalleryView()
+        VStack{
+            //Création du picker
+            Picker("", selection: $selectedView) {
+                ForEach (PickerSelection.allCases, id: \.self) { page in
+                    Text(page.rawValue).tag(page)
+                        .padding(.vertical, 10)
                 }
+            } //picker fin
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+            .cornerRadius(25)
+            .padding(.top)
+            .padding([.leading, .trailing], 50)
+            //Affichage vue selon filtre séléctionné
+            switch selectedView {
+            case .map:
+                MapView()
+            case .list:
+                EventListView()
+            case .gallery:
+                GalleryView()
             }
         }
     }
-    
-    #Preview {
-        PickerView()
-    }
-    
-    
-    
+}
+
+#Preview {
+    PickerView()
+}
+
+
+

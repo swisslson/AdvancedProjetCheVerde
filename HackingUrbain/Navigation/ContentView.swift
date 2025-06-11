@@ -20,7 +20,7 @@ struct ContentView: View {
                 .tabItem {Label( "Evenements ", image: .event)}
             ProfilView()
                 .tabItem {Label( "Compte", systemImage: "person")}
-        }// fin du tabView
+        } // fin du tabView
         .tint(Color(.violet))
         .onAppear(){
             UITabBar.appearance().backgroundColor = UIColor.white

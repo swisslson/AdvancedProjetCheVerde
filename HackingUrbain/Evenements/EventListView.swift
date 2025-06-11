@@ -8,10 +8,12 @@ import SwiftUI
 
 struct EventListView: View {
     let events = eventArray
+    
+    // Par default selection filtre = "Tout voir"
     @State private var selectedFilter: Filter = filtersDate[0]
     @State private var navigationPath = NavigationPath() // chemin de navigation
     
-    //struct pour appliquer filtres par date
+    //Logique pour appliquer filtres par date
     var filteredEvents: [Event]  {
         let now = Date()
         let calendar = Calendar.current
@@ -58,10 +60,10 @@ struct EventListView: View {
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: .infinity, alignment: .center)
                     Spacer()
-                }
-                else {
+                } else {
                     ScrollView {
-                        VStack(spacing: -35) { //BOUCLE BLOC EVENT
+                        VStack(spacing: -35) {
+                            //BOUCLE BLOC EVENT
                             ForEach(filteredEvents) { event in
                                 EventView(event: event)
                             }
@@ -69,9 +71,11 @@ struct EventListView: View {
                     }
                 }
             }
+            .foregroundStyle(.black)
         }//navigationStack
     }
 }
+
 #Preview {
     EventListView()
 }

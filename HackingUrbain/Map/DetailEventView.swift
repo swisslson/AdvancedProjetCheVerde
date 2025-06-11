@@ -16,7 +16,6 @@ struct DetailEventView: View {
     }// fin du body
 }// fin view
 
-//
-//#Preview {
-//    DetailEventView()
-//}
+#Preview {
+    DetailEventView(event: eventArray.first!)
+}

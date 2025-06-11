@@ -17,7 +17,6 @@ struct Event: Identifiable {
     let status: String
     let NbUsers: String
     let color: Color
-    let image: String? //? = optionnel - A garder ou strutucre à part pour photos ??
     var coordinate: CLLocationCoordinate2D
     var Category: String
     var colorMap: Color
@@ -35,7 +34,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+5",
             color: Color("vert"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8976, longitude: 2.3444), //Porte de Clignancourt
             Category: "Ateliers",
             colorMap: Color("vert"),
@@ -52,7 +50,6 @@ struct Event: Identifiable {
             status: "2 places",
             NbUsers: "+7",
             color: Color("violet"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8400, longitude: 2.3655), //Austerlitz
             Category: "Actions",
             colorMap: Color("violet"),
@@ -69,7 +66,6 @@ struct Event: Identifiable {
             status: "2 places",
             NbUsers: "+2",
             color: Color("orangeF"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8733, longitude: 2.3895), // Ménilmontant
             Category: "Actions",
             colorMap: Color("violet"),
@@ -85,7 +81,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("vert"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8638, longitude: 2.4433), //Haut Montreuil
             Category: "Ateliers",
             colorMap: Color("vert"),
@@ -101,7 +96,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("violet"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8545, longitude: 2.4290), // Robespierre
             Category: "Photos",
             colorMap: Color("orangeF"),
@@ -117,7 +111,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("orangeF"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8352, longitude:  2.3877), //Bercy
             Category: "Photos",
             colorMap: Color("orangeF"),
@@ -133,7 +126,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("vert"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8407, longitude: 2.3211), //Montparnasse
             Category: "Photos",
             colorMap: Color("orangeF"),
@@ -149,7 +141,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("violet"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8691, longitude: 2.3632), //République
             Category: "Ateliers",
             colorMap: Color("vert"),
@@ -165,7 +156,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("orangeF"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8350, longitude: 2.2934),//convention
             Category: "Ateliers",
             colorMap: Color("vert"),
@@ -181,7 +171,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("vert"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 2.3488, longitude: 2.3488), //quartier latin
             Category: "Ateliers",
             colorMap: Color("vert"),
@@ -197,7 +186,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("violet"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8465, longitude: 2.2591), //Auteuil
             Category: "Actions",
             colorMap: Color("violet"),
@@ -213,7 +201,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("orangeF"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8702, longitude: 2.3242), //Madeleine
             Category: "Photos",
             colorMap: Color("orangeF"),
@@ -229,7 +216,6 @@ struct Event: Identifiable {
             status: "Complet",
             NbUsers: "+1",
             color: Color("vert"),
-            image: nil,
             coordinate: CLLocationCoordinate2D(latitude: 48.8912, longitude: 2.3015), //Levallois
             Category: "Actions",
             colorMap: Color("violet"),

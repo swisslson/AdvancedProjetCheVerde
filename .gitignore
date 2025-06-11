@@ -1,4 +1,8 @@
-## Remove local data
-HackingUrbain.xcodeproj/xcuserdata
+## Xcode-specific files
+*.xcuserstate
+*.xcuserdata
+*.xcworkspace
+*.xcuserdatad/
+*.xcscmblueprint
 .DS_Store
-HackingUrbain/.DS_Store
+

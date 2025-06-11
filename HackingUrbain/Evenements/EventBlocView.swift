@@ -22,7 +22,7 @@ struct EventView: View {
                         .font(.system(size: 34, weight: .bold))
                         .multilineTextAlignment(.leading)
                         .padding()
-                    Rectangle() //trait
+                    Rectangle() //trait séparateur
                         .frame(width: 1, height: 73)
                     VStack(alignment: .leading) {
                         Text(event.titre)
@@ -85,6 +85,7 @@ struct EventView: View {
             .padding(.bottom, 45)
         }
     }
+    //Structure pour rectangle fond asymetrique (radius - top/ no radius - bottom)
     struct RoundedCorner: Shape {
         var radius: CGFloat = 25.0
         var corners: UIRectCorner = .allCorners
@@ -103,4 +104,3 @@ struct EventView: View {
 #Preview {
     EventView(event: eventArray[0])
 }
-

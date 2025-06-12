@@ -15,7 +15,7 @@ struct Badge: Identifiable {
     let isActive: Bool
     let activeImage: String
     let inactiveImage: String
-    let decsription: String
+    let description: String
     
     var imageName: String {
         isActive ? activeImage : inactiveImage
@@ -28,6 +28,7 @@ struct User {
     var description: String
     var badges: [Badge]
     var gallery: [String]
+    var myEvents: [Event]
 }
 
   let user = User(
@@ -35,8 +36,10 @@ struct User {
             pseudo: "Alizé",
             description: "Voici ma description d'utilisateur.Voici ma description d'utilisateur.Voici ma description d'utilisateur.",
             badges: [
-                Badge(name: "débutant", isActive: true, activeImage: "perso1", inactiveImage: "perso-nb1",decsription: "a"),
-                Badge(name: "1er participation", isActive: false, activeImage: "perso2", inactiveImage: "perso-nb2",decsription: "a")
+                Badge(name: "Débutant", isActive: true, activeImage: "perso9", inactiveImage: "perso-nb9", description: "Pour obtenir ce badge, il faut faire le kit de démarrage et valider le quiz. "),
+                Badge(name: "1er participation", isActive: false, activeImage: "perso1", inactiveImage: "perso-nb1", description: "Pour obtenir ce badge, il faut participer à au moins un événement."),
+                Badge(name: "1er création", isActive: false, activeImage: "perso6", inactiveImage: "perso-nb6", description: "Pour obtenir ce badge, il faut créer au moins un événement."),
+                
             ],
             gallery: ["albumCompte1",
                       "albumCompte2",
@@ -46,4 +49,11 @@ struct User {
                       "albumCompte6"
                 
             ]
+            ,
+            myEvents: [eventArray[1], eventArray[3], eventArray[2],eventArray[4]
+                
+                
+            ]
+               
+            
         )

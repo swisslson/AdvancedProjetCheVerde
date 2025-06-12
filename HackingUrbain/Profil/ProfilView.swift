@@ -9,134 +9,133 @@ import SwiftUI
 
 struct ProfilView: View {
     
-    private let columns = Array(repeating: GridItem(.flexible()), count: 3)
-//    @State private var user = User
+    struct IdentifiableString: Identifiable {
+        let id = UUID()
+        let value: String
+    }
+    
+    let user : User
+    
+    private let columns = Array(repeating: GridItem(.flexible(), spacing: 14), count: 3)
+           
+    @State var showAlertBadge = false
+    @State private var selectedBadge: Badge?
+    @State private var selectedImage: IdentifiableString? = nil
+
+    @AppStorage("isConnected") var isConnected: Bool = false
     
     var body: some View {
-        VStack{
-            
+        ScrollView(.vertical, showsIndicators: false){
             VStack{
-                Image(user.photo)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 160, height: 160)
-                    .clipShape(Circle())
-//                              .shadow(radius: 5)
-                Text("Hey \(user.pseudo) !")
-                    .font(Font.custom("InstrumentSans-Bold", size: 30))
-                    .foregroundColor(Color.black)
-                // fair la fonts
-                    .padding(.top, 5)
-                
-            }// fin de vsteack photo speudo
-            .padding(.bottom, 15.0)
-            
-            
-            VStack{
-                Text("Descprition")
-                    .font(Font.custom("InstrumentSans-Bold", size: 14))
-
-                    .foregroundColor(Color.black)
-                    .multilineTextAlignment(.leading)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom, 10.0)
-                
-                
-                // fair la fonts
+                // photo + name
                 VStack{
-                    Text(user.description)
-                        .font(.system(size: 12))
-                        .foregroundColor(Color.black)
-                        .multilineTextAlignment(.leading)
-                        .padding(.bottom, 10)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Image(user.photo)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 160, height: 160)
+                        .clipShape(Circle())
+                    
+                    Text("Hey \(user.pseudo) !")
+                        .font(Font.custom("InstrumentSans-Bold", size: 30))
+                    
                     // fair la fonts
-                }
+                        .padding(.top, 5)
+                    
+                }// fin de vstack photo speudo
+                .padding(.bottom, 15.0)
                 
+                //Descprition
+                VStack{
+                    Text("Descprition")
+                        .font(Font.custom("InstrumentSans-Bold", size: 16))
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.bottom, 10.0)
+                    
+                    
+                    
+                    VStack{
+                        Text(user.description)
+                            .font(.system(size: 14))
+                            .multilineTextAlignment(.leading)
+                            .padding(.bottom, 10)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                    }
+                    
+                    
+                }// fin de la stack description
+                .padding(.horizontal, 20)
                 
-            }// fin de la stack description
-            //            .padding(.bottom, 300)
-            .padding(.horizontal, 30)
-            
-            
-            
-            
-            VStack {
-                Text("Mes Badges")
-                    .font(Font.custom("InstrumentSans-Bold", size: 14))
-                    .foregroundColor(Color.black)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                ScrollView(.horizontal) {
-                    HStack(spacing: 15) {
-                        ForEach(user.badges) { badge in
-                        VStack {
-                            Image(badge.imageName)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 70, height: 70)
-                            Text(badge.name)
-                                .font(.system(size: 12))
-                                .foregroundColor(Color.black)
-                                .padding(.top, 3)
-                            
-                            
+                // badges
+                VStack {
+                    Text("Mes Badges")
+                        .font(Font.custom("InstrumentSans-Bold", size: 16))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 15) {
+                            ForEach(user.badges) { badge in
+                                BadgeDescripionView(badge: badge, showAlertBadge: $showAlertBadge, selectedBadge: $selectedBadge)
                             }
                         }
-                  
-                        
-                        
-                        
+                    }
+                    .scrollIndicators(.hidden)
+                }// fin de badges
+                .padding(.leading, 20)
+                
+                
+                // Galerie
+                VStack{
+                    Text("Ma galerie")
+                        .font(Font.custom("InstrumentSans-Bold", size: 16))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 5)
+                        .padding([.bottom, .top], 10)
+                    
+                    LazyVGrid(columns: columns, spacing: 14) {
+                        ForEach(user.gallery, id: \.self) { imageName in
+                            Image(imageName)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 110, height: 110)
+                                .clipped()
+                                .cornerRadius(20)
+                                .onTapGesture {
+                                    selectedImage = IdentifiableString(value: imageName)
+                                }
+                        }
                     }
                     
-                }
-            }// fin de v stack badges
-            .padding(.horizontal, 30)
-            
-            
-            // boucle et verif condition is == true pour afficher struct person-> [logo = image == false/ image == true]
-            
-            
-            
-            // boucle affichage photo prise struc liste dimage
-            // Galerie
-            VStack{
-                Text("Ma galerie")
-                    .font(Font.custom("InstrumentSans-Bold", size: 14))
-                    .foregroundColor(Color.black)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 5)
-                    .padding([.bottom, .top], 10)
-                    
-                LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(user.gallery, id: \.self) { imageName in
-                        Image(imageName)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 100, height: 100)
-                            .clipped()
-                            .cornerRadius(20)
+                }.padding(.horizontal, 20)
+                // fin de vstack gallery
+                
+                
+                Button {
+                    isConnected = false
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 30)
+                            .frame(width: 331, height: 56)
+                            .foregroundColor(Color.vert)
+                        HStack{
+                            Text("Déconnexion")
+                                .font(Font.custom("InstrumentSans-Bold", size: 16))
+                                .foregroundColor(Color.black)
+                        }
                     }
+                    .padding()
                 }
-                .padding(.horizontal, 10.0)
-            }.padding(.horizontal, 30)
-               
+                .padding(.bottom, 16)
+            }// fin de vstack de page
+            .fullScreenCover(item: $selectedImage) { identifiableImage in
+                FullscreenImageView(imageName: identifiableImage.value)
+            }
             
-            
-        }// fin de vstack de page
-    
-        
-    }// fin du body
-    
-    
-}// fin du ProfilView
-
-
-
-
-
-
-
+        }
+    }// fin de body
+}// fin du }View
 
 #Preview {
-    ProfilView()
+    ProfilView(user: user)
 }

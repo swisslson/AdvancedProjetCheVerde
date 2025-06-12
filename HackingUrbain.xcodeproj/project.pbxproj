@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D200AA82DFAE0A90065D921 /* StructProfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AA72DFAE0A80065D921 /* StructProfil.swift */; };
+		8D200AAB2DFAE1060065D921 /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AAA2DFAE1060065D921 /* ProfilView.swift */; };
+		8D200AAC2DFAE1060065D921 /* BadgeDescripionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AA92DFAE1060065D921 /* BadgeDescripionView.swift */; };
+		8D200AAF2DFAE1850065D921 /* MyEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AAD2DFAE1850065D921 /* MyEventView.swift */; };
+		8D200AB32DFAE18C0065D921 /* FullscreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AB02DFAE18C0065D921 /* FullscreenImageView.swift */; };
+		8D200AB42DFAE18C0065D921 /* InfoSelectedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AB12DFAE18C0065D921 /* InfoSelectedEventView.swift */; };
+		8D200AB62DFAF7220065D921 /* StructKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AB52DFAF7220065D921 /* StructKit.swift */; };
+		8D200AC02DFAF7670065D921 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200ABF2DFAF7670065D921 /* ResultView.swift */; };
+		8D200AC22DFAF77B0065D921 /* QuizzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AC12DFAF77B0065D921 /* QuizzView.swift */; };
+		8D200ACB2DFAF81F0065D921 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200ACA2DFAF81F0065D921 /* Questions.swift */; };
+		8D200ACD2DFAF82A0065D921 /* KitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200ACC2DFAF82A0065D921 /* KitView.swift */; };
 		8D7D468A2DF1962400031242 /* InstrumentSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */; };
 		8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46982DF1983C00031242 /* EventBlocView.swift */; };
 		8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46992DF1983C00031242 /* EventListView.swift */; };
@@ -24,11 +35,20 @@
 		FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEA2DECB37C00929D3A /* ContentView.swift */; };
 		FFDBBFF92DECB37C00929D3A /* TutorielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */; };
 		FFDBBFFA2DECB37C00929D3A /* HackingUrbainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */; };
-		FFDBC1012DF319C700929D3A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC1002DF319C700929D3A /* ProfilView.swift */; };
-		FFDBC1032DF319E600929D3A /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDBC1022DF319E600929D3A /* Struct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D200AA72DFAE0A80065D921 /* StructProfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructProfil.swift; sourceTree = "<group>"; };
+		8D200AA92DFAE1060065D921 /* BadgeDescripionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDescripionView.swift; sourceTree = "<group>"; };
+		8D200AAA2DFAE1060065D921 /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		8D200AAD2DFAE1850065D921 /* MyEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventView.swift; sourceTree = "<group>"; };
+		8D200AB02DFAE18C0065D921 /* FullscreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenImageView.swift; sourceTree = "<group>"; };
+		8D200AB12DFAE18C0065D921 /* InfoSelectedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSelectedEventView.swift; sourceTree = "<group>"; };
+		8D200AB52DFAF7220065D921 /* StructKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructKit.swift; sourceTree = "<group>"; };
+		8D200ABF2DFAF7670065D921 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		8D200AC12DFAF77B0065D921 /* QuizzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzView.swift; sourceTree = "<group>"; };
+		8D200ACA2DFAF81F0065D921 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		8D200ACC2DFAF82A0065D921 /* KitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitView.swift; sourceTree = "<group>"; };
 		8D7D46882DF1938F00031242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSans-Bold.ttf"; sourceTree = "<group>"; };
 		8D7D46982DF1983C00031242 /* EventBlocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBlocView.swift; sourceTree = "<group>"; };
@@ -48,9 +68,15 @@
 		FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorielView.swift; sourceTree = "<group>"; };
 		FFDBBFF02DECB37C00929D3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackingUrbainApp.swift; sourceTree = "<group>"; };
-		FFDBC1002DF319C700929D3A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
-		FFDBC1022DF319E600929D3A /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8D200AC32DFAF7EB0065D921 /* connexion */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = connexion;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FFDBBFA62DECAC7B00929D3A /* Frameworks */ = {
@@ -63,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D200AAE2DFAE1850065D921 /* MyEvents */ = {
+			isa = PBXGroup;
+			children = (
+				8D200AAD2DFAE1850065D921 /* MyEventView.swift */,
+			);
+			path = MyEvents;
+			sourceTree = "<group>";
+		};
+		8D200AB22DFAE18C0065D921 /* reutilisable */ = {
+			isa = PBXGroup;
+			children = (
+				8D200AB02DFAE18C0065D921 /* FullscreenImageView.swift */,
+				8D200AB12DFAE18C0065D921 /* InfoSelectedEventView.swift */,
+			);
+			path = reutilisable;
+			sourceTree = "<group>";
+		};
 		FFDBBFA02DECAC7B00929D3A = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +166,8 @@
 		FFDBBFED2DECB37C00929D3A /* Profil */ = {
 			isa = PBXGroup;
 			children = (
-				FFDBC1002DF319C700929D3A /* ProfilView.swift */,
+				8D200AA92DFAE1060065D921 /* BadgeDescripionView.swift */,
+				8D200AAA2DFAE1060065D921 /* ProfilView.swift */,
 			);
 			path = Profil;
 			sourceTree = "<group>";
@@ -131,6 +175,11 @@
 		FFDBBFEF2DECB37C00929D3A /* Tutoriel */ = {
 			isa = PBXGroup;
 			children = (
+				8D200AB52DFAF7220065D921 /* StructKit.swift */,
+				8D200ACC2DFAF82A0065D921 /* KitView.swift */,
+				8D200AC12DFAF77B0065D921 /* QuizzView.swift */,
+				8D200ACA2DFAF81F0065D921 /* Questions.swift */,
+				8D200ABF2DFAF7670065D921 /* ResultView.swift */,
 				FFDBBFEE2DECB37C00929D3A /* TutorielView.swift */,
 			);
 			path = Tutoriel;
@@ -139,11 +188,12 @@
 		FFDBBFF22DECB37C00929D3A /* HackingUrbain */ = {
 			isa = PBXGroup;
 			children = (
+				8D200AC32DFAF7EB0065D921 /* connexion */,
 				8D7D46882DF1938F00031242 /* Info.plist */,
 				8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */,
 				FFDBBFF12DECB37C00929D3A /* HackingUrbainApp.swift */,
-				FFDBBFFB2DECB7C100929D3A /* OnBoarding */,
-				FFDBBFFC2DECB7DF00929D3A /* Inscription */,
+				8D200AAE2DFAE1850065D921 /* MyEvents */,
+				8D200AB22DFAE18C0065D921 /* reutilisable */,
 				FFDBBFEB2DECB37C00929D3A /* Navigation */,
 				FFDBBFE52DECB37C00929D3A /* Map */,
 				FFDBBFEF2DECB37C00929D3A /* Tutoriel */,
@@ -156,24 +206,10 @@
 			path = HackingUrbain;
 			sourceTree = "<group>";
 		};
-		FFDBBFFB2DECB7C100929D3A /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = OnBoarding;
-			sourceTree = "<group>";
-		};
-		FFDBBFFC2DECB7DF00929D3A /* Inscription */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Inscription;
-			sourceTree = "<group>";
-		};
 		FFDBBFFD2DECB80700929D3A /* Struct */ = {
 			isa = PBXGroup;
 			children = (
-				FFDBC1022DF319E600929D3A /* Struct.swift */,
+				8D200AA72DFAE0A80065D921 /* StructProfil.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -192,6 +228,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8D200AC32DFAF7EB0065D921 /* connexion */,
 			);
 			name = HackingUrbain;
 			packageProductDependencies = (
@@ -252,22 +291,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFDBBFF42DECB37C00929D3A /* MapView.swift in Sources */,
+				8D200AB62DFAF7220065D921 /* StructKit.swift in Sources */,
 				FFDBBFF52DECB37C00929D3A /* CreeView.swift in Sources */,
+				8D200AAB2DFAE1060065D921 /* ProfilView.swift in Sources */,
+				8D200AAC2DFAE1060065D921 /* BadgeDescripionView.swift in Sources */,
 				FFDBBFF72DECB37C00929D3A /* ContentView.swift in Sources */,
-				FFDBC1032DF319E600929D3A /* Struct.swift in Sources */,
+				8D200AA82DFAE0A90065D921 /* StructProfil.swift in Sources */,
+				8D200AC02DFAF7670065D921 /* ResultView.swift in Sources */,
 				8D7D46BB2DF1E19A00031242 /* StructGallery.swift in Sources */,
+				8D200ACD2DFAF82A0065D921 /* KitView.swift in Sources */,
 				FFDBBFF92DECB37C00929D3A /* TutorielView.swift in Sources */,
 				8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */,
+				8D200AB32DFAE18C0065D921 /* FullscreenImageView.swift in Sources */,
+				8D200AC22DFAF77B0065D921 /* QuizzView.swift in Sources */,
+				8D200AB42DFAE18C0065D921 /* InfoSelectedEventView.swift in Sources */,
+				8D200ACB2DFAF81F0065D921 /* Questions.swift in Sources */,
 				8D7D46B92DF1D41500031242 /* GalleryView.swift in Sources */,
 				8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */,
 				8D7D469F2DF1983C00031242 /* StructEvent.swift in Sources */,
-				FFDBC1012DF319C700929D3A /* ProfilView.swift in Sources */,
 				8D9446772DF81D350023FD69 /* DetailEventView.swift in Sources */,
 				8D9446752DF74C560023FD69 /* PlacesDetailsView.swift in Sources */,
 				8D94466F2DF71F2A0023FD69 /* StructFilterView.swift in Sources */,
 				8D7D46A02DF1983C00031242 /* SelectFilterView.swift in Sources */,
 				8D7D46BD2DF2066300031242 /* PickerView.swift in Sources */,
 				FFDBBFFA2DECB37C00929D3A /* HackingUrbainApp.swift in Sources */,
+				8D200AAF2DFAE1850065D921 /* MyEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

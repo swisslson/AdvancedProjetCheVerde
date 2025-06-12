@@ -68,6 +68,7 @@ struct MyEventView: View {
             
             Text("Mes événements")
                 .font(Font.custom("InstrumentSans-Bold", size: 30))
+                .padding(.bottom, 20)
             
             
             
@@ -80,12 +81,12 @@ struct MyEventView: View {
 //                        .padding(.horizontal, 18)
                         .frame(width: 95, height: 40)
                         .background(selectedFilter == filter ? .violet : .grisClair)
-
                         .cornerRadius(25)
                         .fontWeight(selectedFilter == filter ? .bold : .regular)
                         .onTapGesture {
                             selectedFilter = filter
                         }
+                        .padding(.bottom, 16)
                 }
             }
 
@@ -115,8 +116,10 @@ struct MyEventView: View {
                                         Text(event.titre)
                                             .font(Font.custom("InstrumentSans-Bold", size: 20))
                                             .padding(5)
+                                            .multilineTextAlignment(.leading)
                                         Text("Date: \(event.date.replacingOccurrences(of: "\n", with: "/"))")
                                             .font(.system(size: 12))
+                                            .multilineTextAlignment(.leading)
                                     }
                                     Spacer()
                                 }

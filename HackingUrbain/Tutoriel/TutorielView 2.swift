@@ -14,7 +14,7 @@ import SwiftUI
 struct TutorielView: View {
     @State private var selectedFilter = "Tous"
     
-    private let filters = ["Tous", "Débutant", "Plantage", "Bombes", "Équipement"]
+    private let filters = ["Tous", "Débutant", "Astuces", "Bombes", "Équipement"]
     
     private let kitDemarrage = GuideItem(
         id: 1,
@@ -35,25 +35,23 @@ struct TutorielView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
-                    // Titre principal - Grand titre
                     Text("Guide pratique")
-                        .font(.custom("Instrument Sans", size: 32))
+                        .font(.custom("Instrument Sans", size: 30))
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                         .padding(.top, 10)
                         .padding(.horizontal, 16)
                         .padding(.bottom, 16)
-                    // Filtres - Petit titre
+                    
                     ScrollView(.horizontal, showsIndicators: false) {
-                       
                         HStack(spacing: 12) {
                             Spacer()
                                 .frame(width: 4)
+                            // Affichage filtres
                             ForEach(filters, id: \.self) { filter in
                                 Button(filter) {
                                     selectedFilter = filter
                                 }
-
                                 .font(.system(size: 14))
                                 .foregroundColor(.black)
                                 .fontWeight(selectedFilter == filter ? .bold : .regular)
@@ -76,21 +74,21 @@ struct TutorielView: View {
                                 Image("perso4")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(height: 140)
+                                    .frame(height: 130)
                                     .rotationEffect(.degrees(340))
                                     .cornerRadius(12)
-                                
+                                    .padding(.trailing, 10)
                                 VStack(alignment: .leading, spacing: 8) {
-                                    // Titre kit - Sous titre
+                                    
                                     Text(kitDemarrage.title)
                                         .font(.custom("Instrument Sans", size: 20))
                                         .fontWeight(.bold)
                                         .foregroundColor(.black)
                                         .multilineTextAlignment(.leading)
                                         .padding([.bottom, .top], 6)
-                                    // Description kit - Texte courant
+                                    
                                     Text(kitDemarrage.description)
-                                        .font(.custom("SF Pro", size: 12))
+                                        .font(.custom("SF Pro", size: 14))
                                         .foregroundColor(.black)
                                         .multilineTextAlignment(.leading)
                                         .lineLimit(3)
@@ -117,7 +115,7 @@ struct TutorielView: View {
                             ForEach(filteredTutorials) { tutoriel in
                                 NavigationLink(destination: GuideDetailView(guide: tutoriel)) {
                                     VStack(alignment: .leading, spacing: 8) {
-                                        // Titre tutoriel - Sous titre
+                                        // Titre tutoriel
                                         Text(tutoriel.title)
                                             .font(.custom("InstrumentSans-bold", size: 20))
                                             .fontWeight(.bold)

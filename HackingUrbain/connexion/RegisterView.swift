@@ -139,6 +139,7 @@ struct RegisterView: View {
                             .foregroundColor(Color.black)
                         Text("Se Connecter")
                             .foregroundColor(Color.violet)
+                            .fontWeight(.bold)
                     }}
                 
             }

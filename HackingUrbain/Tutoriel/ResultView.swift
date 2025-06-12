@@ -25,7 +25,7 @@ struct ResultView: View {
                     Text("Vous avez complété le quizz\navec un total de \(score) bonnes réponses")
                         .multilineTextAlignment(.center)
                     
-                    Image(.perso1)
+                    Image(.perso8)
                         .resizable()
                         .frame(width: 150, height: 150)
                     
@@ -46,7 +46,7 @@ struct ResultView: View {
                     // Condition si Quizz Raté = Page Dommage
                 } else {
                     
-                    Image(.perso6)
+                    Image(.perso11)
                     Text("Dommage")
                         .font(Font.custom("InstrumentSans-Bold", size: 32))
                     

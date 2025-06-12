@@ -37,8 +37,6 @@ struct ProfilView: View {
                     
                     Text("Hey \(user.pseudo) !")
                         .font(Font.custom("InstrumentSans-Bold", size: 30))
-                    
-                    // fair la fonts
                         .padding(.top, 5)
                     
                 }// fin de vstack photo speudo

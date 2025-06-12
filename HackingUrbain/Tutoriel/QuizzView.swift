@@ -48,6 +48,7 @@ struct QuizzView: View {
                         HStack {
                             Text(questions[currentQuestion].options[index])
                                 .foregroundColor(.black)
+                                .multilineTextAlignment(.leading)
                             Spacer()
                             Circle()
                                 .fill(selectedIndex == index ? Color.purple : Color.clear)

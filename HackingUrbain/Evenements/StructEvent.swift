@@ -22,6 +22,7 @@ struct Event: Identifiable {
     var colorMap: Color
     var dateEvent: Date
     var adress: String
+    var date2: String
     //ajouter image pour user ?
 }
     let eventArray: [Event] = [
@@ -38,7 +39,8 @@ struct Event: Identifiable {
             Category: "Ateliers",
             colorMap: Color("vert"),
             dateEvent: Date(),
-            adress : "20 rue des bosquets, 75017 Paris"
+            adress : "20 rue des bosquets, 75017 Paris",
+            date2: "18/06/2025"
             
         ),
         Event(
@@ -54,7 +56,8 @@ struct Event: Identifiable {
             Category: "Actions",
             colorMap: Color("violet"),
             dateEvent: Date(),
-            adress : "56 rue de la rapée, 75012 Paris"
+            adress : "56 rue de la rapée, 75012 Paris",
+            date2: "18/06/2025"
             
         ),
         Event(
@@ -70,11 +73,12 @@ struct Event: Identifiable {
             Category: "Actions",
             colorMap: Color("violet"),
             dateEvent: Date(),
-            adress : "67 rue Menilmontant, 75020 Paris"
+            adress : "67 rue Menilmontant, 75020 Paris",
+            date2: "18/06/2025"
         ),
         Event(
             date: "23\n06",
-            titre: "Atelier Bombes de Graines",
+            titre: "Atelier bombes de Graines",
             description: "Venez mener la green guerilla avec nous en fabriquant vos Seed bombs Envie de transformer la ville avec nous ? Rejoignez notre atelier de fabrication de seed bombs 💣 et devenez acteur·rice du changement ! ",
             heure: "17h00",
             isFull: true,
@@ -85,11 +89,12 @@ struct Event: Identifiable {
             Category: "Ateliers",
             colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "134 rue de Paris, 93000 Montreuil"
+            adress : "134 rue de Paris, 93000 Montreuil",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
-            titre: "Titre",
+            titre: "Session Paris Green",
             description: "Antehac quam insontibus placentia regni leviter cruoris Hannibaliano clandestinos turgida rumigerulos.",
             heure: "17h00",
             isFull: true,
@@ -100,7 +105,8 @@ struct Event: Identifiable {
             Category: "Photos",
             colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress: "64 rue de Paris, 93000 Montreuil"
+            adress: "64 rue de Paris, 93000 Montreuil",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -115,7 +121,8 @@ struct Event: Identifiable {
             Category: "Photos",
             colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "5 rue de Bercy, paris 12"
+            adress : "5 rue de Bercy, paris 12",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -130,7 +137,8 @@ struct Event: Identifiable {
             Category: "Photos",
             colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "4 boulevard Montparnasse, paris 14"
+            adress : "4 boulevard Montparnasse, paris 14",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -145,7 +153,8 @@ struct Event: Identifiable {
             Category: "Ateliers",
             colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "134 avenue de la Republique, Paris 4"
+            adress : "134 avenue de la Republique, Paris 4",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -160,7 +169,8 @@ struct Event: Identifiable {
             Category: "Ateliers",
             colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "14 avenue Convention, Paris 15"
+            adress : "14 avenue Convention, Paris 15",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -175,7 +185,8 @@ struct Event: Identifiable {
             Category: "Ateliers",
             colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "39 rue des Ecoles, 75006 Paris"
+            adress : "39 rue des Ecoles, 75006 Paris",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -190,7 +201,8 @@ struct Event: Identifiable {
             Category: "Actions",
             colorMap: Color("violet"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : ""
+            adress : "23 rue du Four, 75016 Paris",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -205,7 +217,8 @@ struct Event: Identifiable {
             Category: "Photos",
             colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "22 rue des Martyrs, 75008 Paris"
+            adress : "22 rue des Martyrs, 75008 Paris",
+            date2: "23/06/2025"
         ),
         Event(
             date: "23\n06",
@@ -220,6 +233,7 @@ struct Event: Identifiable {
             Category: "Actions",
             colorMap: Color("violet"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
-            adress : "89 rue du bois, 75016 Paris"
+            adress : "89 rue du bois, 75016 Paris",
+            date2: "23/06/2025"
         ),
     ]

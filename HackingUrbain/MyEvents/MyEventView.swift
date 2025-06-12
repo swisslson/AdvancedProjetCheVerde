@@ -9,14 +9,12 @@ import SwiftUI
 
 struct MyEventView: View {
     @State private var selectedFilter: EventFilter = .present
-//    var user: User
+    //    var user: User
     let eventColors: [Color] = [.vert, .violet, .orangeF]
     let eventImages: [String] = ["star", "diamond", "circle"]
-
-
     
     func dateKey(from string: String) -> Int {
-       
+        
         let cleanString = string.replacingOccurrences(of: "\n", with: "/")
         let components = cleanString.split(separator: "/")
         
@@ -25,10 +23,8 @@ struct MyEventView: View {
            let month = Int(components[1]) {
             return month * 100 + day
         }
-        
         return 0
     }
-
     
     var filteredEvents: [Event] {
         let todayKey = dateKey(from: "19/06")
@@ -43,42 +39,32 @@ struct MyEventView: View {
         }
     }
     
-    
-    
-    
     enum EventFilter: String, CaseIterable, Identifiable {
-        case present = "Présents"
+        case present = "À venir"
         case passe = "Passés"
         
         var id: String { self.rawValue }
     }
-    
-    
     
     struct IdentifiableEvent: Identifiable {
         let id = UUID()
         let event: Event
     }
     @State private var selectedEvent: IdentifiableEvent? = nil
-
-
     
     var body: some View {
         VStack {
             
             Text("Mes événements")
                 .font(Font.custom("InstrumentSans-Bold", size: 30))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 20)
                 .padding(.bottom, 20)
-            
-            
-            
             
             HStack(spacing: 12) {
                 ForEach(EventFilter.allCases) { filter in
                     Text(filter.rawValue)
-                        .font(.system( size: 12))
-//                        .padding(.vertical, 8)
-//                        .padding(.horizontal, 18)
+                        .font(.system(size: 12))
                         .frame(width: 95, height: 40)
                         .background(selectedFilter == filter ? .violet : .grisClair)
                         .cornerRadius(25)
@@ -86,12 +72,11 @@ struct MyEventView: View {
                         .onTapGesture {
                             selectedFilter = filter
                         }
-                        .padding(.bottom, 16)
                 }
             }
-
-            
-            
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading, 20)
+            .padding(.bottom, 16)
             
             ScrollView {
                 LazyVStack{
@@ -99,53 +84,43 @@ struct MyEventView: View {
                     ForEach(Array(filteredEvents.enumerated()), id: \.element.id) { index, event in
                         let color = eventColors[index % eventColors.count]
                         let imageName = eventImages[index % eventImages.count]
-//                        NavigationLink(destination: CreeView(event: event)) {
+                        
+                        ZStack {
+                            Rectangle()
+                                .fill(color)
+                                .frame(height: 110)
+                                .cornerRadius(25)
                             
-                            ZStack {
-                                Rectangle()
-                                    .fill(color)
-                                    .frame(height: 90)
-                                    .cornerRadius(25)
-                                HStack {
-                                    Image(imageName)
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                        .padding(.leading, 20)
-                                    Spacer()
-                                    VStack {
-                                        Text(event.titre)
-                                            .font(Font.custom("InstrumentSans-Bold", size: 20))
-                                            .padding(5)
-                                            .multilineTextAlignment(.leading)
-                                        Text("Date: \(event.date.replacingOccurrences(of: "\n", with: "/"))")
-                                            .font(.system(size: 12))
-                                            .multilineTextAlignment(.leading)
-                                    }
-                                    Spacer()
+                            HStack(spacing: 25) {
+                                Image(imageName)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 60, height: 60)
+                                
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(event.titre)
+                                        .font(Font.custom("InstrumentSans-Bold", size: 20))
+                                        .foregroundColor(.black)
+                                        .padding(.bottom, 4)
+                                    Text("\(event.date2) - \(event.heure)")
+                                        .font(.system(size: 14))
+                                        .foregroundColor(.black)
                                 }
-                            }// fin de zstack event
-                            .onTapGesture {
-                                selectedEvent = IdentifiableEvent(event: event)
+                                Spacer()
                             }
-                            .padding(5)
-                            
-//                        }
+                            .padding(.horizontal, 20)
+                        }
+                        .padding(.bottom, 10)
                     }
-                    
                 }
-                
-                
+                .fullScreenCover(item: $selectedEvent) { identifiable in
+                    InfoSelectedEventView(event: identifiable.event)
+                }
+                .padding()
             }
-            
         }
-        .fullScreenCover(item: $selectedEvent) { identifiable in
-            InfoSelectedEventView(event: identifiable.event)
-        }
-        .padding()
-     
     }
 }
-
 #Preview {
     MyEventView()
 }

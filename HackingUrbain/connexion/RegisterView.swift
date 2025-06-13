@@ -69,7 +69,7 @@ struct RegisterView: View {
                             .foregroundColor(Color.vert)
                         HStack{
                             Text("Créer un compte")
-                                .font(Font.custom("InstrumentSans-Bold", size: 14))
+                                .font(Font.custom("InstrumentSans-Bold", size: 16))
                                 .foregroundColor(Color.black)
                         }
                     }
@@ -139,7 +139,6 @@ struct RegisterView: View {
                             .foregroundColor(Color.black)
                         Text("Se Connecter")
                             .foregroundColor(Color.violet)
-                            .fontWeight(.bold)
                     }}
                 
             }

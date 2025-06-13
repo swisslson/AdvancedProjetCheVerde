@@ -44,7 +44,7 @@ struct ProfilView: View {
                 
                 //Descprition
                 VStack{
-                    Text("Descprition")
+                    Text("Description")
                         .font(Font.custom("InstrumentSans-Bold", size: 16))
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -54,7 +54,7 @@ struct ProfilView: View {
                     
                     VStack{
                         Text(user.description)
-                            .font(.system(size: 14))
+                            .font(.system(size: 15))
                             .multilineTextAlignment(.leading)
                             .padding(.bottom, 10)
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -125,7 +125,8 @@ struct ProfilView: View {
                     .padding()
                 }
                 .padding(.bottom, 16)
-            }// fin de vstack de page
+            }
+            .navigationBarBackButtonHidden()
             .fullScreenCover(item: $selectedImage) { identifiableImage in
                 FullscreenImageView(imageName: identifiableImage.value)
             }

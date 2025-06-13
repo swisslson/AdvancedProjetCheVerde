@@ -64,7 +64,7 @@ struct SignInView: View {
                   .foregroundColor(Color.vert)
                 HStack{
                   Text("Se connecter")
-                    .font(Font.custom("InstrumentSans-Bold", size: 14))
+                    .font(Font.custom("InstrumentSans-Bold", size: 16))
                     .foregroundColor(Color.black)
                 }}
           }

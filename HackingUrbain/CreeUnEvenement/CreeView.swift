@@ -17,7 +17,7 @@ struct CreeView: View {
     var isFormComplete: Bool {
         return !input1.isEmpty && !input3.isEmpty && !input4.isEmpty && numberOfPeople > 0
     }
-
+    
     func header() -> some View {
         HStack {
             Text("Créer un event")
@@ -33,23 +33,24 @@ struct CreeView: View {
             Form {
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Nom du groupe :")
-                        .font(.headline)
-                    TextField("Entrer un nom de groupe", text: ($input1))
-                      .padding(.leading)
-                      .frame(maxWidth: .infinity)
-                      .frame(width: 331,height: 55)
-                      .background(Color.violet)
-                      .background(.gray.opacity(0.15),in: .rect(cornerRadius: 30))
-                      .fontWeight(.bold)
+                        .font(Font.custom("InstrumentSans-Bold", size: 16))
+                    TextField("", text: ($input1), prompt: Text("Entrer un nom de groupe").foregroundColor(.black))
+                        .padding(.leading)
+                        .frame(maxWidth: .infinity)
+                        .frame(width: 331,height: 55)
+                        .background(Color.violet)
+                        .background(.gray.opacity(0.15),in: .rect(cornerRadius: 30))
                 }
                 .foregroundColor(.black) // Couleur noire
                 .padding(.bottom, 10)
                 
                 VStack {
                     HStack {
-                        Text("Date de l'event :").font(.headline)
+                        Text("Date de l'event :")
+                            .font(Font.custom("InstrumentSans-Bold", size: 16))
                         Spacer()
-                        Text("Heure de début :").font(.headline)
+                        Text("Heure de début :")
+                            .font(Font.custom("InstrumentSans-Bold", size: 16))
                     }
                     
                     HStack {
@@ -63,11 +64,11 @@ struct CreeView: View {
                     }
                 }
                 .padding(.bottom, 10)
-                
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Localisation :").font(.headline)
+                    Text("Localisation :")
+                        .font(Font.custom("InstrumentSans-Bold", size: 16))
                     HStack {
-                        TextField("Entrer une localisation", text: $input3)
+                        TextField("", text: ($input3), prompt: Text("Adresse de l'event").foregroundColor(.black))
                             .padding(.leading, 32)
                             .frame(maxWidth: .infinity)
                             .frame(width: 331, height: 55)
@@ -76,25 +77,24 @@ struct CreeView: View {
                             .overlay(
                                 HStack {
                                     Image(systemName: "mappin.and.ellipse")
-                                        .foregroundColor(.gray)
+                                        .foregroundColor(.black)
                                         .padding(.leading, 8)
                                     Spacer()
                                 }
                             )
-                            .fontWeight(.bold)
                     }
                 }
                 .padding(.bottom, 10)
-
+                
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Description :")
-                        .font(.headline)
-                    TextField("Entrer une description", text: ($input4))
-                      .padding(.leading)
-                      .frame(maxWidth: .infinity)
-                      .frame(width: 331,height: 55)
-                      .background(.gray.opacity(0.15),in: .rect(cornerRadius: 30))
-                      .fontWeight(.bold)
+                        .font(Font.custom("InstrumentSans-Bold", size: 16))
+                    TextField("", text: ($input4), prompt: Text("Entrer une description").foregroundColor(.black))
+                        .padding(.leading)
+                        .frame(maxWidth: .infinity)
+                        .frame(width: 331,height: 55)
+                        .background(.gray.opacity(0.15),in: .rect(cornerRadius: 30))
+                    
                 }
                 .padding(.bottom, 10)
                 
@@ -105,15 +105,15 @@ struct CreeView: View {
                         }
                     }
                     .pickerStyle(.menu)
+                    .font(Font.custom("InstrumentSans-Bold", size: 16))
                     .font(.headline)
                 }
                 .padding(.bottom, 10)
-                
                 Button(action: {
                     showingAlert = true;
                 }) {
                     Text("Créer")
-                        .font(Font.custom("InstrumentSans-Bold",size: 14))                        .foregroundColor(.black)
+                        .font(Font.custom("InstrumentSans-Bold",size: 16))                        .foregroundColor(.black)
                         .frame(width: 331, height: 56)
                         .background(Color.vert)
                         .cornerRadius(30)

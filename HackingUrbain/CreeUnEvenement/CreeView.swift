@@ -41,8 +41,6 @@ struct CreeView: View {
                         .background(Color.violet)
                         .background(.gray.opacity(0.15),in: .rect(cornerRadius: 30))
                 }
-                .foregroundColor(.black) // Couleur noire
-                .padding(.bottom, 10)
                 
                 VStack {
                     HStack {

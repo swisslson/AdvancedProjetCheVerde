@@ -16,27 +16,40 @@ struct InfoSelectedEventView: View {
     var body: some View {
         VStack {
             
-        
-        HStack(alignment: .lastTextBaseline) {
-            Spacer()
-            Button (action: {
-                dismiss()
-            }){
-                Image(systemName: "xmark.circle.fill")
-                    .font(.system(size: 30))
-                    .foregroundColor(.black)
-                    .padding()
+            HStack(alignment: .lastTextBaseline) {
+                Text("\(event.titre)")
+                    .font(Font.custom("InstrumentSans-Bold", size: 30))
+                    .bold()
                 
+                Spacer()
+                
+                Button (action: {
+                    dismiss()
+                }){
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.system(size: 30))
+                        .foregroundColor(.black)
+                }
             }
-        }
+            .padding()
+            .background(Color(.vert))
+            
+
+            
+
+            
+
+            
+            
+            VStack {
+                Text("Membres du groupe :")
+                    .font(Font.custom("InstrumentSans-Bold", size: 16))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .padding()
+            
             Spacer()
             // carte de medi  ici
-            
-            
-           
-   
-        
-            
                     Text("Titre: \(event.titre)")
                     Text("Date: \(event.date)")
                     Text("status: \(event.status)")

@@ -54,12 +54,10 @@ struct CreeView: View {
                         DatePicker("Date :", selection: $selectedDate, displayedComponents: [.date])
                             .environment(\.locale, Locale(identifier: "fr_FR"))
                             .labelsHidden()
-                            .background(Color.violet, in: .rect(cornerRadius: 30))
                         Spacer()
                         DatePicker("Heure :", selection: $selectedTime, displayedComponents: [.hourAndMinute])
                             .environment(\.locale, Locale(identifier: "fr_FR"))
                             .labelsHidden()
-                            .background(Color.violet, in: .rect(cornerRadius: 30))
                     }
                 }
                 .padding(.bottom, 10)

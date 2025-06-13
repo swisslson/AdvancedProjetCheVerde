@@ -110,6 +110,9 @@ struct MyEventView: View {
                             }
                             .padding(.horizontal, 20)
                         }
+                        .onTapGesture {
+                            selectedEvent = IdentifiableEvent(event: event)
+                        }
                         .padding(.bottom, 10)
                     }
                 }

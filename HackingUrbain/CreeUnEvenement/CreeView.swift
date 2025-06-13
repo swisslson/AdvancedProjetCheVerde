@@ -38,9 +38,11 @@ struct CreeView: View {
                       .padding(.leading)
                       .frame(maxWidth: .infinity)
                       .frame(width: 331,height: 55)
-                      .background(Color.vert)
+                      .background(Color.violet)
                       .background(.gray.opacity(0.15),in: .rect(cornerRadius: 30))
+                      .fontWeight(.bold)
                 }
+                .foregroundColor(.black) // Couleur noire
                 .padding(.bottom, 10)
                 
                 VStack {
@@ -69,7 +71,7 @@ struct CreeView: View {
                             .padding(.leading, 32)
                             .frame(maxWidth: .infinity)
                             .frame(width: 331, height: 55)
-                            .background(Color.vert)
+                            .background(Color.violet)
                             .background(.gray.opacity(0.15), in: .rect(cornerRadius: 30))
                             .overlay(
                                 HStack {
@@ -79,6 +81,7 @@ struct CreeView: View {
                                     Spacer()
                                 }
                             )
+                            .fontWeight(.bold)
                     }
                 }
                 .padding(.bottom, 10)
@@ -91,6 +94,7 @@ struct CreeView: View {
                       .frame(maxWidth: .infinity)
                       .frame(width: 331,height: 55)
                       .background(.gray.opacity(0.15),in: .rect(cornerRadius: 30))
+                      .fontWeight(.bold)
                 }
                 .padding(.bottom, 10)
                 

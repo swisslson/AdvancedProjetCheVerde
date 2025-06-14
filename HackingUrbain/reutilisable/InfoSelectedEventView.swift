@@ -120,7 +120,7 @@ struct InfoSelectedEventView: View {
                 Text("À propos")
                     .font(Font.custom("InstrumentSans-Bold", size: 20))
                     .padding(.top, 30)
-                    .padding(.leading)
+                    .padding([.bottom, .leading])
                 
                 Text("\(event.description)")
                     .font(Font.custom("InstrumentSans", size: 16))
@@ -187,14 +187,90 @@ struct InfoSelectedEventView: View {
                 .padding(.leading)
                 .padding(.top, 8)
                 
+                Text("Commentaires")
+                    .font(Font.custom("InstrumentSans-Bold", size: 20))
+                    .padding(.top, 30)
+                    .padding(.leading)
                 
+                HStack(spacing: 10) {
+                    Image("user1")
+                        .resizable()
+                        .frame(width: 45, height: 45)
+                        .clipShape(Circle())
+
+                    Text("Pseudoname")
+                        .font(Font.custom("InstrumentSans", size: 16))
+                        .font(.system(size: 16, weight: .bold))
+
+                    Spacer()
+                    
+                    HStack(spacing: 8) {
+                        Text("\(event.date2)")
+                            .font(Font.custom("InstrumentSans", size: 14))
+                        Text("\(event.heure)")
+                            .font(Font.custom("InstrumentSans", size: 14))
+                    }
+                    .padding(.trailing)
+                }
+                .padding([.bottom, .leading])
+                .padding(.top)
                 
-                Spacer()
+                HStack(alignment: .top) {
+                    Spacer()
+                        .frame(width: 45 + 10)
+
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 25)
+                            .fill(Color(.grisClair))
+                            .frame(width: 302, height: 67)
+
+                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.")
+                            .font(Font.custom("InstrumentSans", size: 14))
+                            .foregroundColor(.black)
+                            .padding(.horizontal)
+                    }
+                }
+                .padding(.leading)
                 
+                HStack(spacing: 10) {
+                    Image("user3")
+                        .resizable()
+                        .frame(width: 45, height: 45)
+                        .clipShape(Circle())
+
+                    RoundedRectangle(cornerRadius: 25)
+                        .fill(Color(.vert))
+                        .frame(width: 306, height: 45)
+                        .overlay(
+                            HStack {
+                                Text("Ajouter un commentaire")
+                                    .font(Font.custom("InstrumentSans", size: 14))
+                                    .foregroundColor(.black)
+                                    .padding(.leading, 20)
+                                Spacer()
+                            }
+                        )
+                }
+                .padding(.leading)
+                .padding(.top)
+                
+                HStack {
+                    Spacer()
+
+                    RoundedRectangle(cornerRadius: 30)
+                        .fill(Color(.violet))
+                        .frame(width: 230, height: 45)
+                        .overlay(
+                            Text("Rejoindre")
+                                .font(Font.custom("InstrumentSans-Bold", size: 14))
+                        )
+                    Spacer()
+                }
+                .padding(.top, 25)
+                .padding(.bottom, 25)
             }
         }
         .edgesIgnoringSafeArea(.all)
-        
     }
 }
 

@@ -21,9 +21,9 @@ struct InfoSelectedEventView: View {
                     .bold()
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
-
+                
                 Spacer()
-
+                
                 Button(action: {
                     dismiss()
                 }) {
@@ -34,7 +34,7 @@ struct InfoSelectedEventView: View {
             }
             .padding([.leading, .trailing])
             .background(Color(.vert))
-
+            
             HStack {
                 Text("\(event.status)")
                     .font(.system(size: 20, weight: .bold))
@@ -42,20 +42,18 @@ struct InfoSelectedEventView: View {
                     .background(.gray.opacity(0.15), in: RoundedRectangle(cornerRadius: 30))
                 Spacer()
             }
-
+            
             .padding([.leading, .trailing])
             .padding(.vertical)
             .background(Color(.vert))
         }
-
-
-            
+        
         VStack(alignment: .leading) {
             Text("Membres du groupe :")
                 .font(Font.custom("InstrumentSans-Bold", size: 20))
                 .padding(.top, 30)
                 .padding(.leading)
-
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 15) {
                     Image("user1")
@@ -65,22 +63,22 @@ struct InfoSelectedEventView: View {
                         .overlay(
                             Circle().stroke(Color.blue, lineWidth: 2)
                         )
-
+                    
                     Image("user2")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
-
+                    
                     Image("user3")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
-
+                    
                     Image("user4")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
-
+                    
                     Image("user5")
                         .resizable()
                         .frame(width: 100, height: 100)
@@ -88,15 +86,52 @@ struct InfoSelectedEventView: View {
                 }
                 .padding(.horizontal)
             }
-        }
             
-            Spacer()
-            // carte de medi  ici
-                    Text("Titre: \(event.titre)")
-                    Text("Date: \(event.date)")
-                    Text("status: \(event.status)")
-            Spacer()
-                }
+            Text("4 participants")
+                .font(Font.custom("InstrumentSans", size: 16))
+                .padding(.top, 16)
+                .padding(.leading)
+            
+            Text("Infos pratiques :")
+                .font(Font.custom("InstrumentSans-Bold", size: 20))
+                .padding(.top, 30)
+                .padding(.leading)
+            
+            HStack {
+                Image(systemName: "calendar")
+                    .foregroundColor(.black)
+                    .imageScale(.large)
+                    .font(.system(size: 16, weight: .bold))
+                Text("\(event.date2) - \(event.heure)")
+                    .font(Font.custom("InstrumentSans-Bold", size: 16))
+            }
+            .padding(.top, 4)
+            .padding(.leading)
+            
+            HStack {
+                Image(systemName: "map")
+                    .foregroundColor(.black)
+                    .imageScale(.large)
+                    .font(.system(size: 16, weight: .bold))
+                Text("\(event.adress)")
+                    .font(Font.custom("InstrumentSans-Bold", size: 16))
+            }
+            .padding(.top, 4)
+            .padding(.leading)
+            
+            Text("À propos")
+                .font(Font.custom("InstrumentSans-Bold", size: 20))
+                .padding(.top, 30)
+                .padding(.leading)
+            
+            Text("\(event.description)")
+                .font(Font.custom("InstrumentSans", size: 16))
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 4)
+                .padding(.leading)
+        }
+        Spacer()
+    }
 }
 
 #Preview {

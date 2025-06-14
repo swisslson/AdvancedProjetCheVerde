@@ -50,12 +50,45 @@ struct InfoSelectedEventView: View {
 
 
             
-            VStack {
-                Text("Membres du groupe :")
-                    .font(Font.custom("InstrumentSans-Bold", size: 16))
-                    .frame(maxWidth: .infinity, alignment: .leading)
+        VStack(alignment: .leading) {
+            Text("Membres du groupe :")
+                .font(Font.custom("InstrumentSans-Bold", size: 20))
+                .padding(.top, 30)
+                .padding(.leading)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 15) {
+                    Image("user1")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                        .overlay(
+                            Circle().stroke(Color.blue, lineWidth: 2)
+                        )
+
+                    Image("user2")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+
+                    Image("user3")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+
+                    Image("user4")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+
+                    Image("user5")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                }
+                .padding(.horizontal)
             }
-            .padding()
+        }
             
             Spacer()
             // carte de medi  ici
@@ -64,8 +97,6 @@ struct InfoSelectedEventView: View {
                     Text("status: \(event.status)")
             Spacer()
                 }
-        
-    
 }
 
 #Preview {

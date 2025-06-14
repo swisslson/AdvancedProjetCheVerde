@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct InfoSelectedEventView: View {
-    
+
     var event: Event
     @Environment(\.dismiss) private var dismiss
 
-    
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .leading, spacing: 0) {
+
             HStack(alignment: .lastTextBaseline) {
                 Text("\(event.titre)")
                     .font(Font.custom("InstrumentSans-Bold", size: 30))
                     .bold()
                     .lineLimit(1)
                     .minimumScaleFactor(0.5)
-                
+
                 Spacer()
-                
+
                 Button(action: {
                     dismiss()
                 }) {
@@ -33,8 +33,8 @@ struct InfoSelectedEventView: View {
                 }
             }
             .padding([.leading, .trailing])
-            .background(Color(.vert))
-            
+            .background(Color(event.color))
+
             HStack {
                 Text("\(event.status)")
                     .font(.system(size: 20, weight: .bold))
@@ -42,43 +42,38 @@ struct InfoSelectedEventView: View {
                     .background(.gray.opacity(0.15), in: RoundedRectangle(cornerRadius: 30))
                 Spacer()
             }
-            
             .padding([.leading, .trailing])
             .padding(.vertical)
-            .background(Color(.vert))
-        }
-        
-        VStack(alignment: .leading) {
+            .background(Color(event.color))
+
             Text("Membres du groupe :")
                 .font(Font.custom("InstrumentSans-Bold", size: 20))
-                .padding(.top, 30)
-                .padding(.leading)
-            
+                .padding(.top, 20)
+                .padding([.top, .bottom, .leading])
+
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 15) {
                     Image("user1")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
-                        .overlay(
-                            Circle().stroke(Color.blue, lineWidth: 2)
-                        )
-                    
+                        .overlay(Circle().stroke(Color.blue, lineWidth: 2))
+
                     Image("user2")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
-                    
+
                     Image("user3")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
-                    
+
                     Image("user4")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
-                    
+
                     Image("user5")
                         .resizable()
                         .frame(width: 100, height: 100)
@@ -86,17 +81,18 @@ struct InfoSelectedEventView: View {
                 }
                 .padding(.horizontal)
             }
-            
+
             Text("4 participants")
                 .font(Font.custom("InstrumentSans", size: 16))
                 .padding(.top, 16)
                 .padding(.leading)
-            
+
+            // Section Infos pratiques
             Text("Infos pratiques :")
                 .font(Font.custom("InstrumentSans-Bold", size: 20))
                 .padding(.top, 30)
-                .padding(.leading)
-            
+                .padding([.bottom, .leading])
+
             HStack {
                 Image(systemName: "calendar")
                     .foregroundColor(.black)
@@ -107,7 +103,7 @@ struct InfoSelectedEventView: View {
             }
             .padding(.top, 4)
             .padding(.leading)
-            
+
             HStack {
                 Image(systemName: "map")
                     .foregroundColor(.black)
@@ -118,23 +114,26 @@ struct InfoSelectedEventView: View {
             }
             .padding(.top, 4)
             .padding(.leading)
-            
+
+            // Section À propos
             Text("À propos")
                 .font(Font.custom("InstrumentSans-Bold", size: 20))
                 .padding(.top, 30)
                 .padding(.leading)
-            
+
             Text("\(event.description)")
                 .font(Font.custom("InstrumentSans", size: 16))
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.top, 4)
                 .padding(.leading)
+
+            Spacer()
         }
-        Spacer()
     }
 }
 
-#Preview {
-
-    InfoSelectedEventView(event: eventArray[0])
+struct InfoSelectedEventView_Previews: PreviewProvider {
+    static var previews: some View {
+        InfoSelectedEventView(event: eventArray[0])
+    }
 }

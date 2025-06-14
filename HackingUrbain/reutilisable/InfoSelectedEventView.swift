@@ -14,32 +14,41 @@ struct InfoSelectedEventView: View {
 
     
     var body: some View {
-        VStack {
-            
+        VStack(spacing: 0) {
             HStack(alignment: .lastTextBaseline) {
                 Text("\(event.titre)")
                     .font(Font.custom("InstrumentSans-Bold", size: 30))
                     .bold()
-                
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+
                 Spacer()
-                
-                Button (action: {
+
+                Button(action: {
                     dismiss()
-                }){
+                }) {
                     Image(systemName: "xmark.circle.fill")
                         .font(.system(size: 30))
                         .foregroundColor(.black)
                 }
             }
-            .padding()
+            .padding([.leading, .trailing])
             .background(Color(.vert))
-            
 
-            
+            HStack {
+                Text("\(event.status)")
+                    .font(.system(size: 20, weight: .bold))
+                    .frame(width: 150, height: 40)
+                    .background(.gray.opacity(0.15), in: RoundedRectangle(cornerRadius: 30))
+                Spacer()
+            }
 
-            
+            .padding([.leading, .trailing])
+            .padding(.vertical)
+            .background(Color(.vert))
+        }
 
-            
+
             
             VStack {
                 Text("Membres du groupe :")
@@ -56,7 +65,7 @@ struct InfoSelectedEventView: View {
             Spacer()
                 }
         
-    }
+    
 }
 
 #Preview {

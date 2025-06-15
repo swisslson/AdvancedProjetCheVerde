@@ -11,7 +11,6 @@ struct EventListView: View {
     
     // Par default selection filtre = "Tout voir"
     @State private var selectedFilter: Filter = filtersDate[0]
-    @State private var navigationPath = NavigationPath() // chemin de navigation
     
     //Logique pour appliquer filtres par date
     var filteredEvents: [Event]  {
@@ -33,7 +32,7 @@ struct EventListView: View {
         }
     }
     var body: some View {
-        NavigationStack(path: $navigationPath) {
+        NavigationStack {
             VStack(alignment: .leading, spacing: 20) {
                 ScrollView(.horizontal) {
                     ZStack {//BOUCLE FILTRES
@@ -49,10 +48,10 @@ struct EventListView: View {
                                 }
                             }
                         }
+                        .padding(.leading, 20)
                     }//FIN FILTRES
                 }
                 .scrollIndicators(.hidden)
-                .padding(.leading, 20)
                 if filteredEvents.isEmpty {
                     Spacer()
                     Text("Pas d'évènements pour le moment.")
@@ -65,7 +64,12 @@ struct EventListView: View {
                         VStack(spacing: -35) {
                             //BOUCLE BLOC EVENT
                             ForEach(filteredEvents) { event in
-                                EventView(event: event)
+                                NavigationLink {
+                                    DetailEventView(event: event)
+                                } label: {
+                                    EventView(event: event)
+                                }
+                                
                             }
                         }
                     }
@@ -73,6 +77,7 @@ struct EventListView: View {
             }
             .foregroundStyle(.black)
         }//navigationStack
+        .tint(Color.black)
     }
 }
 

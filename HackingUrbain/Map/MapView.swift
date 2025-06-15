@@ -72,7 +72,7 @@ struct MapView: View {
                     }
                     .mapStyle(.standard(pointsOfInterest: .excludingAll))
                 }
-                // MODALE = fiche info event
+                // MODALE = bloc infos event
                 if let event = selectedEvent {
                    // Lien vers page détail event
                     NavigationLink {

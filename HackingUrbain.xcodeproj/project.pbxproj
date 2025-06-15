@@ -18,7 +18,8 @@
 		8D200AC22DFAF77B0065D921 /* QuizzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AC12DFAF77B0065D921 /* QuizzView.swift */; };
 		8D200ACB2DFAF81F0065D921 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200ACA2DFAF81F0065D921 /* Questions.swift */; };
 		8D200ACD2DFAF82A0065D921 /* KitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200ACC2DFAF82A0065D921 /* KitView.swift */; };
-		8D200AD12DFB131E0065D921 /* TutorielView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200AD02DFB131E0065D921 /* TutorielView 2.swift */; };
+		8D200B0B2DFECF7C0065D921 /* TutorielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200B0A2DFECF650065D921 /* TutorielView.swift */; };
+		8D200B0D2DFECFF10065D921 /* TutoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D200B0C2DFECFF10065D921 /* TutoDetailView.swift */; };
 		8D7D468A2DF1962400031242 /* InstrumentSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */; };
 		8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46982DF1983C00031242 /* EventBlocView.swift */; };
 		8D7D469E2DF1983C00031242 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D46992DF1983C00031242 /* EventListView.swift */; };
@@ -49,7 +50,8 @@
 		8D200AC12DFAF77B0065D921 /* QuizzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzView.swift; sourceTree = "<group>"; };
 		8D200ACA2DFAF81F0065D921 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		8D200ACC2DFAF82A0065D921 /* KitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitView.swift; sourceTree = "<group>"; };
-		8D200AD02DFB131E0065D921 /* TutorielView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TutorielView 2.swift"; sourceTree = "<group>"; };
+		8D200B0A2DFECF650065D921 /* TutorielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorielView.swift; sourceTree = "<group>"; };
+		8D200B0C2DFECFF10065D921 /* TutoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutoDetailView.swift; sourceTree = "<group>"; };
 		8D7D46882DF1938F00031242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D7D46892DF1962400031242 /* InstrumentSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InstrumentSans-Bold.ttf"; sourceTree = "<group>"; };
 		8D7D46982DF1983C00031242 /* EventBlocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBlocView.swift; sourceTree = "<group>"; };
@@ -178,7 +180,8 @@
 				8D200AB52DFAF7220065D921 /* StructKit.swift */,
 				8D200ACC2DFAF82A0065D921 /* KitView.swift */,
 				8D200AC12DFAF77B0065D921 /* QuizzView.swift */,
-				8D200AD02DFB131E0065D921 /* TutorielView 2.swift */,
+				8D200B0A2DFECF650065D921 /* TutorielView.swift */,
+				8D200B0C2DFECFF10065D921 /* TutoDetailView.swift */,
 				8D200ACA2DFAF81F0065D921 /* Questions.swift */,
 				8D200ABF2DFAF7670065D921 /* ResultView.swift */,
 			);
@@ -300,8 +303,9 @@
 				8D200AC02DFAF7670065D921 /* ResultView.swift in Sources */,
 				8D7D46BB2DF1E19A00031242 /* StructGallery.swift in Sources */,
 				8D200ACD2DFAF82A0065D921 /* KitView.swift in Sources */,
+				8D200B0B2DFECF7C0065D921 /* TutorielView.swift in Sources */,
+				8D200B0D2DFECFF10065D921 /* TutoDetailView.swift in Sources */,
 				8D7D469C2DF1983C00031242 /* EventBlocView.swift in Sources */,
-				8D200AD12DFB131E0065D921 /* TutorielView 2.swift in Sources */,
 				8D200AB32DFAE18C0065D921 /* FullscreenImageView.swift in Sources */,
 				8D200AC22DFAF77B0065D921 /* QuizzView.swift in Sources */,
 				8D200AB42DFAE18C0065D921 /* InfoSelectedEventView.swift in Sources */,

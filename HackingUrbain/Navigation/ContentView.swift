@@ -19,7 +19,7 @@ struct ContentView: View {
                 
                 PickerView()
                     .tabItem {Label( "Carte", systemImage: "map.fill")}
-                TutorielView( )
+                TutorielView()
                     .tabItem {Label( "Tutoriels", image: .plant)}
                 CreeView()
                     .tabItem {Label( "Créer", systemImage: "plus.circle.fill")}

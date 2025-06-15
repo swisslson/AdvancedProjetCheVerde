@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TutoView: View {
+struct KitView: View {
     
     @State private var currentIndex = 0
     
@@ -55,9 +55,10 @@ struct TutoView: View {
                             }
                         }) {
                             Text("Précédent")
+                                .font(Font.custom("InstrumentSans-Bold", size: 16))
                                 .frame(width: 120, height: 50)
                                 .background(Color.gray.opacity(0.1))
-                                .foregroundColor(.gray)
+                                .foregroundColor(.black)
                                 .cornerRadius(30)
                         }
                     } else {
@@ -73,6 +74,7 @@ struct TutoView: View {
                             }
                         }) {
                             Text("Suivant")
+                                .font(Font.custom("InstrumentSans-Bold", size: 16))
                                 .frame(width: 120, height: 50)
                                 .background(Color.vert)
                                 .foregroundColor(.black)
@@ -101,5 +103,5 @@ struct TutoView: View {
 }
 
 #Preview {
-    TutoView()
+    KitView()
 }

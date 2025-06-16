@@ -257,20 +257,23 @@ struct InfoSelectedEventView: View {
                 .padding(.leading)
                 .padding(.top)
                 
-                HStack {
-                    Spacer()
-
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(Color(.violet))
-                        .frame(width: 230, height: 45)
-                        .overlay(
-                            Text("Rejoindre")
-                                .font(Font.custom("InstrumentSans-Bold", size: 14))
-                        )
-                    Spacer()
+                // Show join button
+                if (!showPicker) {
+                    HStack {
+                        Spacer()
+                        RoundedRectangle(cornerRadius: 30)
+                            .fill(Color(.violet))
+                            .frame(width: 230, height: 45)
+                            .overlay(
+                                Text("Rejoindre")
+                                    .font(Font.custom("InstrumentSans-Bold", size: 14))
+                                    .foregroundColor(.black)
+                            )
+                        Spacer()
+                    }
+                    .padding(.top, 25)
+                    .padding(.bottom, 100)
                 }
-                .padding(.top, 25)
-                .padding(.bottom, 100)
             }
         }
         .edgesIgnoringSafeArea(.all)

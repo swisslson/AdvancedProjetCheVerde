@@ -78,7 +78,6 @@ struct EventListView: View {
                     }
                 }
             }
-            .foregroundStyle(.black)
         }//navigationStack
         .tint(Color.black)
     }

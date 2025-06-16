@@ -39,9 +39,10 @@ struct InfoSelectedEventView: View {
                 
                 HStack {
                     Text("\(event.status)")
-                        .font(.system(size: 20, weight: .bold))
-                        .frame(width: 150, height: 40)
-                        .background(.gray.opacity(0.15), in: RoundedRectangle(cornerRadius: 30))
+                        .font(.system(size: 14))
+                        .foregroundColor(.black)
+                        .frame(width: 120, height: 32)
+                        .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.black, lineWidth: 1))
                     Spacer()
                 }
                 .padding([.leading, .trailing])

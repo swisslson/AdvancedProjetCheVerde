@@ -11,6 +11,8 @@ struct InfoSelectedEventView: View {
 
     var event: Event
     @Environment(\.dismiss) private var dismiss
+    
+    @Binding var showPicker: Bool;
 
     var body: some View {
         ScrollView {
@@ -273,11 +275,21 @@ struct InfoSelectedEventView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarBackButtonHidden()
+        .onAppear {
+            withAnimation {
+                showPicker = false
+            }
+        }
+        .onDisappear {
+            withAnimation {
+                showPicker = true
+            }
+        }
     }
 }
 
 struct InfoSelectedEventView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoSelectedEventView(event: eventArray[0])
+        InfoSelectedEventView(event: eventArray[0], showPicker: .constant(false))
     }
 }

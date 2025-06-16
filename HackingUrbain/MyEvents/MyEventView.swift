@@ -13,6 +13,7 @@ struct MyEventView: View {
     let eventColors: [Color] = [.vert, .violet, .orangeF]
     let eventImages: [String] = ["star", "diamond", "circle"]
     
+    @Binding var showPicker: Bool
     func dateKey(from string: String) -> Int {
         
         let cleanString = string.replacingOccurrences(of: "\n", with: "/")
@@ -117,7 +118,7 @@ struct MyEventView: View {
                     }
                 }
                 .fullScreenCover(item: $selectedEvent) { identifiable in
-                    InfoSelectedEventView(event: identifiable.event)
+                    InfoSelectedEventView(event: identifiable.event, showPicker: $showPicker)
                 }
                 .padding()
             }
@@ -125,5 +126,5 @@ struct MyEventView: View {
     }
 }
 #Preview {
-    MyEventView()
+    MyEventView(showPicker: .constant(false))
 }

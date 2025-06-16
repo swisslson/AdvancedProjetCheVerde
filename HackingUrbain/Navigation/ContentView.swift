@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @AppStorage("isConnected") var isConnected: Bool = false
+    @State private var showPicker: Bool = true
     
     var body: some View {
         if isConnected == false {
@@ -23,7 +24,7 @@ struct ContentView: View {
                     .tabItem {Label( "Tutoriels", image: .plant)}
                 CreeView()
                     .tabItem {Label( "Créer", systemImage: "plus.circle.fill")}
-                MyEventView()
+                MyEventView(showPicker: $showPicker)
                     .tabItem {Label( "Evenements ", image: .event)}
                 ProfilView(user: user)
                     .tabItem {Label( "Compte", systemImage: "person")}

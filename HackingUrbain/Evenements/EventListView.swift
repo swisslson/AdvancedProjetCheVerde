@@ -12,6 +12,8 @@ struct EventListView: View {
     // Par default selection filtre = "Tout voir"
     @State private var selectedFilter: Filter = filtersDate[0]
     
+    @Binding var showPicker: Bool;
+    
     //Logique pour appliquer filtres par date
     var filteredEvents: [Event]  {
         let now = Date()
@@ -31,6 +33,7 @@ struct EventListView: View {
             return events
         }
     }
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 20) {
@@ -61,11 +64,11 @@ struct EventListView: View {
                     Spacer()
                 } else {
                     ScrollView {
-                        VStack(spacing: -35) {
+                        LazyVStack(spacing: -35) {
                             //BOUCLE BLOC EVENT
                             ForEach(filteredEvents) { event in
                                 NavigationLink {
-                                    InfoSelectedEventView(event: event)
+                                    InfoSelectedEventView(event: event, showPicker: $showPicker)
                                 } label: {
                                     EventView(event: event)
                                 }
@@ -82,5 +85,5 @@ struct EventListView: View {
 }
 
 #Preview {
-    EventListView()
+    EventListView(showPicker: .constant(false))
 }

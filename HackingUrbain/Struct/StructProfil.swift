@@ -50,10 +50,5 @@ struct User {
                 
             ]
             ,
-            myEvents: [eventArray[1], eventArray[3], eventArray[2],eventArray[4]
-                
-                
-            ]
-               
-            
+            myEvents: [eventArray[1], eventArray[3], eventArray[2],eventArray[4]]
         )

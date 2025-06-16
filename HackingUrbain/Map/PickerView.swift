@@ -14,7 +14,7 @@ struct PickerView: View {
     @State private var showPicker: Bool = true;
 
     var body: some View {
-        VStack(spacing: 0) {
+        VStack {
             // Affichage conditionnel du Picker
             if showPicker {
                 Picker("", selection: $selectedView) {

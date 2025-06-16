@@ -270,7 +270,7 @@ struct InfoSelectedEventView: View {
                     Spacer()
                 }
                 .padding(.top, 25)
-                .padding(.bottom, 25)
+                .padding(.bottom, 100)
             }
         }
         .edgesIgnoringSafeArea(.all)

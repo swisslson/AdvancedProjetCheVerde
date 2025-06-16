@@ -1,9 +1,3 @@
-//
-//  TutorielView.swift
-//  HackingUrbain
-//
-//  Created by alize on 15/06/2025.
-//
 
 import SwiftUI
 
@@ -12,7 +6,7 @@ struct TutorielView: View {
     
     private let filters = ["Tous", "Débutant", "Astuces", "Bombes", "Équipement"]
     
-    private let kitDemarrage = GuideItem (
+    private let kitDemarrage = GuideItem(
         id: 1,
         title: "Kit de Démarrage",
         type: "Débutant",
@@ -21,14 +15,15 @@ struct TutorielView: View {
     )
     
     private let tutoriels = [
-        GuideItem(id: 2, title: "Plantation en Milieu Urbain", type: "Plantage", description: "Techniques de plantation adaptées aux environnements urbains.", backgroundColor: Color.violet, badgeImage: "star"),
-        GuideItem(id: 3, title: "Bombes à Graines", type: "Bombes", description: "Créez vos propres bombes à graines pour végétaliser les espaces abandonnés.", backgroundColor: Color.orangeF, badgeImage: "diamond"),
-        GuideItem(id: 4, title: "Choix de l'Équipement", type: "Équipement", description: "Guide complet pour choisir vos outils de jardinage urbain.", backgroundColor: Color.vert, badgeImage: "circle"),
-        GuideItem(id: 5, title: "Conseils de Progrès", type: "Progrès", description: "Astuces pour observer et optimiser la croissance de vos plantes.", backgroundColor: Color.violet, badgeImage: "star")
+        GuideItem(id: 2, title: "Plantation en Milieu Urbain", type: "Astuces", description: "Techniques de plantation adaptées aux environnements urbains.", backgroundColor: Color.violetApp, badgeImage: "star"),
+        GuideItem(id: 3, title: "Bombes à Graines", type: "Bombes", description: "Créez vos propres bombes à graines pour végétaliser les espaces abandonnés.", backgroundColor: Color.orangeApp, badgeImage: "diamond"),
+        GuideItem(id: 4, title: "Choix de l'Équipement", type: "Équipement", description: "Guide complet pour choisir vos outils de jardinage urbain.", backgroundColor: Color.vertApp, badgeImage: "circle"),
+        GuideItem(id: 5, title: "Conseils de Progrès", type: "Progrès", description: "Astuces pour observer et optimiser la croissance de vos plantes.", backgroundColor: Color.violetApp, badgeImage: "star")
     ]
     
     var body: some View {
         NavigationStack {
+            //Scrolview Horizontal Filtres
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
                     Text("Guide pratique")
@@ -62,9 +57,9 @@ struct TutorielView: View {
                         }
                     }
                     
-                    // Kit de démarrage
+                    // Banniere Kit de démarrage
                     VStack {
-                        
+                        //NavLink -> Kitview
                         NavigationLink(destination: KitView()) {
                             HStack {
                                 Image("perso4")
@@ -104,13 +99,15 @@ struct TutorielView: View {
                         }
                     }.padding(.horizontal, 16)
                     
-                    // Tutoriels
+                    // Tutoriels Grid
                     
                     VStack(alignment: .leading) {
                         
                         LazyVGrid(columns: [GridItem(.flexible(), spacing: 14),GridItem(.flexible())], spacing: 14) {
-                            ForEach(filteredTutorials) { tutoriel in
-                                NavigationLink(destination: TutoDetailView()) {
+                            ForEach(filteredTutorials) {
+                                //Navlink -> TutoDetailView
+                                tutoriel in NavigationLink(destination: TutoDetailView()) {
+                            
                                     VStack(alignment: .leading, spacing: 8) {
                                         // Titre tutoriel
                                         Text(tutoriel.title)
@@ -158,7 +155,6 @@ struct TutorielView: View {
                 }
             }
         }
-        .tint(.black)
     }
     private var filteredTutorials: [GuideItem] {
         selectedFilter == "Tous" ? tutoriels : tutoriels.filter { $0.type == selectedFilter }
@@ -184,8 +180,32 @@ struct GuideItem: Identifiable {
         self.content = content
         self.backgroundColor = backgroundColor
         self.badgeImage = badgeImage
-
+        
     }
+}
+
+struct GuideDetailView: View {
+    let guide: GuideItem
+    
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                // Contenu détail - Texte courant
+                Text("Contenu détaillé du tutoriel à venir...")
+                    .font(.custom("SF Pro", size: 12))
+                    .foregroundColor(.black)
+            }
+            .padding()
+        }
+        .navigationTitle(guide.title)
+        .navigationBarTitleDisplayMode(.large)
+    }
+}
+
+extension Color {
+    static let orangeApp = Color(red: 253/255, green: 161/255, blue: 78/255)
+    static let violetApp = Color(red: 197/255, green: 153/255, blue: 255/255)
+    static let vertApp = Color(red: 205/255, green: 247/255, blue: 77/255)
 }
 
 #Preview {

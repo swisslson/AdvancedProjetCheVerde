@@ -65,7 +65,7 @@ struct EventListView: View {
                             //BOUCLE BLOC EVENT
                             ForEach(filteredEvents) { event in
                                 NavigationLink {
-                                    DetailEventView(event: event)
+                                    InfoSelectedEventView(event: event)
                                 } label: {
                                     EventView(event: event)
                                 }

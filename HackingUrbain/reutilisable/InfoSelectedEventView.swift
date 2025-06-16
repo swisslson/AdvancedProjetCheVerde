@@ -271,6 +271,7 @@ struct InfoSelectedEventView: View {
             }
         }
         .edgesIgnoringSafeArea(.all)
+        .navigationBarBackButtonHidden()
     }
 }
 

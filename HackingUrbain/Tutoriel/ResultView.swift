@@ -12,6 +12,9 @@ struct ResultView: View {
     let maxScore: Int
     let restartAction: () -> Void
     
+    // AJOUT : État pour contrôler l'animation
+    @State private var showAnimation = false
+    
     var body: some View {
         
         NavigationStack {
@@ -19,30 +22,41 @@ struct ResultView: View {
             VStack(spacing: 20) {
                 // Condition si Quizz Reussi = Page Bravo
                 if score == maxScore {
-                    Text("Bravo !")
-                        .font(.largeTitle)
-                        .bold()
-                    Text("Vous avez complété le quizz\navec un total de \(score) bonnes réponses")
-                        .multilineTextAlignment(.center)
                     
-                    Image(.perso11)
-                        .resizable()
-                       .frame(width: 200, height: 200)
-                    
-                    Text("Badge Débloqué")
-                        .bold()
-                    
-                    NavigationLink( destination: ProfilView(user: user)) {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 30)
-                                .frame(width:150 ,height: 50)
-                                .foregroundColor(Color.vert)
-                            HStack{
-                                Text("Mes Badges")
-                                    .foregroundColor(Color.black)
-                                    .font(Font.custom("InstrumentSans-Bold", size: 16))
-                            }}
+                    // AJOUT : Affichage conditionnel
+                    if showAnimation {
+                        // Afficher l'animation
+                        CelebrationAnimationView(score: score) {
+                            showAnimation = false
+                        }
+                    } else {
+                        // Contenu normal après animation
+                        Text("Bravo !")
+                            .font(.largeTitle)
+                            .bold()
+                        Text("Vous avez complété le quizz\navec un total de \(score) bonnes réponses")
+                            .multilineTextAlignment(.center)
+                        
+                        Image(.perso11)
+                            .resizable()
+                           .frame(width: 200, height: 200)
+                        
+                        Text("Badge Débloqué")
+                            .bold()
+                        
+                        NavigationLink( destination: ProfilView(user: user)) {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(width:150 ,height: 50)
+                                    .foregroundColor(Color.vert)
+                                HStack{
+                                    Text("Mes Badges")
+                                        .foregroundColor(Color.black)
+                                        .font(Font.custom("InstrumentSans-Bold", size: 16))
+                                }}
+                        }
                     }
+                    
                     // Condition si Quizz Raté = Page Dommage
                 } else {
                     
@@ -65,6 +79,12 @@ struct ResultView: View {
             }
             .padding()
             .navigationBarBackButtonHidden()
+            // AJOUT : Déclencher l'animation
+            .onAppear {
+                if score == maxScore {
+                    showAnimation = true
+                }
+            }
         }
     }
 }
@@ -72,4 +92,3 @@ struct ResultView: View {
 #Preview {
     QuizzView()
 }
-

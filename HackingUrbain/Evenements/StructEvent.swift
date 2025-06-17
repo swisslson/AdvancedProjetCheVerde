@@ -71,7 +71,7 @@ struct Event: Identifiable {
             color: Color("orangeF"),
             coordinate: CLLocationCoordinate2D(latitude: 48.8733, longitude: 2.3895), // Ménilmontant
             Category: "Actions",
-            colorMap: Color("violet"),
+            colorMap: Color("orangeF"),
             dateEvent: Date(),
             adress : "67 rue Menilmontant, 75020 Paris",
             date2: "18/06/2025"
@@ -103,7 +103,7 @@ struct Event: Identifiable {
             color: Color("violet"),
             coordinate: CLLocationCoordinate2D(latitude: 48.8545, longitude: 2.4290), // Robespierre
             Category: "Photos",
-            colorMap: Color("orangeF"),
+            colorMap: Color("violet"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
             adress: "64 rue de Paris, 93000 Montreuil",
             date2: "23/06/2025"
@@ -135,7 +135,7 @@ struct Event: Identifiable {
             color: Color("vert"),
             coordinate: CLLocationCoordinate2D(latitude: 48.8407, longitude: 2.3211), //Montparnasse
             Category: "Photos",
-            colorMap: Color("orangeF"),
+            colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
             adress : "4 boulevard Montparnasse, paris 14",
             date2: "23/06/2025"
@@ -151,7 +151,7 @@ struct Event: Identifiable {
             color: Color("violet"),
             coordinate: CLLocationCoordinate2D(latitude: 48.8691, longitude: 2.3632), //République
             Category: "Ateliers",
-            colorMap: Color("vert"),
+            colorMap: Color("violet"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
             adress : "134 avenue de la Republique, Paris 4",
             date2: "23/06/2025"
@@ -167,7 +167,7 @@ struct Event: Identifiable {
             color: Color("orangeF"),
             coordinate: CLLocationCoordinate2D(latitude: 48.8350, longitude: 2.2934),//convention
             Category: "Ateliers",
-            colorMap: Color("vert"),
+            colorMap: Color("orangeF"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
             adress : "14 avenue Convention, Paris 15",
             date2: "23/06/2025"
@@ -231,7 +231,7 @@ struct Event: Identifiable {
             color: Color("vert"),
             coordinate: CLLocationCoordinate2D(latitude: 48.8912, longitude: 2.3015), //Levallois
             Category: "Actions",
-            colorMap: Color("violet"),
+            colorMap: Color("vert"),
             dateEvent: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 23))!,
             adress : "89 rue du bois, 75016 Paris",
             date2: "23/06/2025"

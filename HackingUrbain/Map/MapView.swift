@@ -30,6 +30,9 @@ struct MapView: View {
             return places
         }
     }
+    
+    @Binding var showPicker: Bool;
+
     var body: some View {
         NavigationStack{
             ZStack(alignment: .bottom) {
@@ -76,7 +79,7 @@ struct MapView: View {
                 if let event = selectedEvent {
                    // Lien vers page détail event
                     NavigationLink {
-                        DetailEventView(event: event)
+                        InfoSelectedEventView(event: event, showPicker: $showPicker)
                     } label: {
                         // Appel de la vue modale
                         PlacesDetailsView(place: event, onDismiss: { selectedEvent = nil })
@@ -89,5 +92,5 @@ struct MapView: View {
 }
 
 #Preview {
-    MapView()
+    MapView(showPicker: .constant(false))
 }

@@ -32,7 +32,7 @@ struct PickerView: View {
 
             switch selectedView {
             case .map:
-                MapView()
+                MapView(showPicker: $showPicker)
             case .list:
                 EventListView(showPicker: $showPicker)
             case .gallery:

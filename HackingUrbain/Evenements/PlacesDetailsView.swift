@@ -42,6 +42,8 @@ struct PlacesDetailsView: View {
                             .lineSpacing(2)
                             .lineLimit(3)
                             .truncationMode(.tail)
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
                 HStack {

@@ -98,12 +98,16 @@ struct CelebrationAnimationView: View {
                             .foregroundColor(Color.vert)
                             .shadow(color: .vert.opacity(0.3), radius: 10, x: 0, y: 5)
                         
-                        HStack {
-                            Text("Mes Badges")
-                                .foregroundColor(Color.black)
-                                .font(.system(size: 16, weight: .bold))
-                                .animation(
-                                    .easeInOut(duration: 1))
+                        NavigationLink( destination: TutorielView()) {
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(width:150 ,height: 50)
+                                    .foregroundColor(Color.vert)
+                                HStack{
+                                    Text("Retour Tuto")
+                                        .foregroundColor(Color.black)
+                                        .font(Font.custom("InstrumentSans-Bold", size: 16))
+                                }}
                         }
                     }
                 }

@@ -43,18 +43,6 @@ struct ResultView: View {
                         
                         Text("Badge Débloqué")
                             .bold()
-                        
-                        NavigationLink( destination: ProfilView(user: user)) {
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .frame(width:150 ,height: 50)
-                                    .foregroundColor(Color.vert)
-                                HStack{
-                                    Text("Mes Badges")
-                                        .foregroundColor(Color.black)
-                                        .font(Font.custom("InstrumentSans-Bold", size: 16))
-                                }}
-                        }
                     }
                     
                     // Condition si Quizz Raté = Page Dommage

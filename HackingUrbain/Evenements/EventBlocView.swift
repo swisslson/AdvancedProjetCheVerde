@@ -33,6 +33,8 @@ struct EventView: View {
                             .lineSpacing(2)
                             .lineLimit(3)
                             .truncationMode(.tail)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .multilineTextAlignment(.leading)
                     }
                     .padding()
                 }

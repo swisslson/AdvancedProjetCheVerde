@@ -72,12 +72,12 @@ struct EventListView: View {
                                 } label: {
                                     EventView(event: event)
                                 }
-                                
                             }
                         }
                     }
                 }
             }
+            .foregroundStyle(.black)
         }//navigationStack
         .tint(Color.black)
     }
